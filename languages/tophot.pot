@@ -297,7 +297,7 @@ msgstr ""
 
 #. Text in echo
 #: mandarin/inc/functions/functions-header.php:22
-msgid "Download Tophot"
+msgid "Download mellany"
 msgstr ""
 
 #. Text in function

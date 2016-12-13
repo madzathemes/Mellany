@@ -36,7 +36,7 @@ require get_template_directory() .'/inc/single/single-styles.php';
 /*-----------------------------------------------------------------------------------*/
 add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 
-function tophot_theme_setup() {
+function mellany_theme_setup() {
 
 	add_editor_style();
 	add_theme_support( 'post-formats', array('video', 'gallery') );
@@ -45,7 +45,7 @@ function tophot_theme_setup() {
 	add_theme_support( 'woocommerce' );
 	add_theme_support( "title-tag" );
 
-	load_theme_textdomain( 'tophot', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'mellany', get_template_directory() . '/languages' );
 	$locale = get_locale();
 	$locale_file = get_template_directory() . "/languages/$locale.php";
 	if ( is_readable( $locale_file ) )
@@ -54,42 +54,42 @@ function tophot_theme_setup() {
 	set_post_thumbnail_size( 999, 999, true );
 
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Header Menu', 'tophot' ),
-		'mobile' => esc_html__( 'Mobile Menu', 'tophot' ),
-		'footer_menu' => esc_html__( 'Footer Navigation', 'tophot' ),
+		'primary' => esc_html__( 'Header Menu', 'mellany' ),
+		'mobile' => esc_html__( 'Mobile Menu', 'mellany' ),
+		'footer_menu' => esc_html__( 'Footer Navigation', 'mellany' ),
 	) );
 	if ( ! isset( $content_width ) ) { $content_width = 900; }
 }
 
-add_action( 'after_setup_theme', 'tophot_theme_setup' );
+add_action( 'after_setup_theme', 'mellany_theme_setup' );
 
 
 /*-----------------------------------------------------------------------------------*/
 /* Default Options
 /*-----------------------------------------------------------------------------------*/
 
-function tophot_javascript_detection() {
+function mellany_javascript_detection() {
 	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 }
-add_action( 'wp_head', 'tophot_javascript_detection', 0 );
+add_action( 'wp_head', 'mellany_javascript_detection', 0 );
 
 if ( ! isset( $content_width ) ) {
 	$content_width = 740;
 }
 
-function tophot_import_files() {
+function mellany_import_files() {
     return array(
         array(
-            'import_file_name'             => esc_html__( 'Demo 1', 'tophot' ),
+            'import_file_name'             => esc_html__( 'Demo 1', 'mellany' ),
             'local_import_file'            => trailingslashit( get_template_directory() ) . 'inc/import/demo1/demo.xml',
             'local_import_customizer_file' => trailingslashit( get_template_directory() ) . 'inc/import/demo1/customizer.dat',
-            'import_notice'                => esc_html__( 'Customize this theme from Appearance/Customize', 'tophot' ),
+            'import_notice'                => esc_html__( 'Customize this theme from Appearance/Customize', 'mellany' ),
         )
     );
 }
-add_filter( 'pt-ocdi/import_files', 'tophot_import_files' );
+add_filter( 'pt-ocdi/import_files', 'mellany_import_files' );
 
-function tophot_after_import_setup() {
+function mellany_after_import_setup() {
     // Assign menus to their locations.
     $main_menu = get_term_by( 'name', 'Header', 'nav_menu' );
 		$mobile_menu = get_term_by( 'name', 'Mobile Menu', 'nav_menu' );
@@ -109,4 +109,4 @@ function tophot_after_import_setup() {
     update_option( 'page_on_front', $front_page_id->ID );
 
 }
-add_action( 'pt-ocdi/after_import', 'tophot_after_import_setup' );
+add_action( 'pt-ocdi/after_import', 'mellany_after_import_setup' );

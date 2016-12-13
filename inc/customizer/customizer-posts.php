@@ -1,31 +1,31 @@
 <?php
-function tophot_customize_posts($wp_customize){
+function mellany_customize_posts($wp_customize){
 
 
 
   $wp_customize->add_section('posts_default_settings', array(
-    'title'    	=> esc_html__('Posts', 'tophot'),
+    'title'    	=> esc_html__('Posts', 'mellany'),
     'priority'       => 301,
   ));
 
-  Kirki::add_field( 'tophot_theme_options[post_carousel]', array(
+  Kirki::add_field( 'mellany_theme_options[post_carousel]', array(
 	'type'        => 'switch',
-	'settings'    => 'tophot_theme_options[post_carousel]',
-	'label'       => esc_html__( 'Post Carousel', 'tophot' ),
+	'settings'    => 'mellany_theme_options[post_carousel]',
+	'label'       => esc_html__( 'Post Carousel', 'mellany' ),
 	'section'     => 'posts_default_settings',
 	'default'     => 'yes',
   'option_type' => 'option',
 	'priority'    => 10,
 	'choices'     => array(
-		'yes'  => esc_attr__( 'Enable', 'tophot' ),
-		'no' => esc_attr__( 'Disable', 'tophot' ),
+		'yes'  => esc_attr__( 'Enable', 'mellany' ),
+		'no' => esc_attr__( 'Disable', 'mellany' ),
 	),
   ) );
 
-  Kirki::add_field( 'tophot_theme_options[post_sidebar]', array(
+  Kirki::add_field( 'mellany_theme_options[post_sidebar]', array(
   	'type'        => 'radio-image',
-  	'settings'    => 'tophot_theme_options[post_sidebar]',
-  	'label'       => esc_html__( 'Sidebar Position', 'tophot' ),
+  	'settings'    => 'mellany_theme_options[post_sidebar]',
+  	'label'       => esc_html__( 'Sidebar Position', 'mellany' ),
   	'section'     => 'posts_default_settings',
   	'default'     => 'left',
     'option_type' => 'option',
@@ -36,10 +36,10 @@ function tophot_customize_posts($wp_customize){
   	   ),
   ));
 
-  Kirki::add_field( 'tophot_theme_options[post_style]', array(
+  Kirki::add_field( 'mellany_theme_options[post_style]', array(
   	'type'        => 'radio-image',
-  	'settings'    => 'tophot_theme_options[post_style]',
-  	'label'       => esc_html__( 'Post Style', 'tophot' ),
+  	'settings'    => 'mellany_theme_options[post_style]',
+  	'label'       => esc_html__( 'Post Style', 'mellany' ),
   	'section'     => 'posts_default_settings',
   	'default'     => '1',
     'option_type' => 'option',
@@ -64,5 +64,5 @@ function tophot_customize_posts($wp_customize){
 
 }
 
-add_action('customize_register', 'tophot_customize_posts');
+add_action('customize_register', 'mellany_customize_posts');
 ?>

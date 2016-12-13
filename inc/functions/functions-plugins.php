@@ -4,7 +4,7 @@
  */
 require get_template_directory() .'/all_plugins/class-tgm-plugin-activation.php';
 
-add_action( 'tgmpa_register', 'tophot_register_required_plugins' );
+add_action( 'tgmpa_register', 'mellany_register_required_plugins' );
 /**
  * Register the required plugins for this theme.
  *
@@ -17,7 +17,7 @@ add_action( 'tgmpa_register', 'tophot_register_required_plugins' );
  * This function is hooked into tgmpa_init, which is fired within the
  * TGM_Plugin_Activation class constructor.
  */
-function tophot_register_required_plugins() {
+function mellany_register_required_plugins() {
 
     /**
      * Array of plugin arrays. Required keys are name, slug and required.
@@ -27,7 +27,7 @@ function tophot_register_required_plugins() {
 
 
         array(
-            'name'			=> esc_html__( "Envato WordPress Toolkit","tophot" ), // The plugin name
+            'name'			=> esc_html__( "Envato WordPress Toolkit","mellany" ), // The plugin name
             'slug'			=> 'envato-wordpress-toolkit-master', // The plugin slug (typically the folder name)
             'source'			=> get_template_directory() . '/all_plugins/envato-wordpress-toolkit-master.zip', // The plugin source
             'required'			=> true, // If false, the plugin is only 'recommended' instead of required
@@ -37,19 +37,19 @@ function tophot_register_required_plugins() {
             'external_url'		=> '', // If set, overrides default API URL and points to an external URL
         ),
         array(
-        			'name'     				=> esc_html__( "Page Builder by SiteOrigin","tophot" ), // The plugin name
+        			'name'     				=> esc_html__( "Page Builder by SiteOrigin","mellany" ), // The plugin name
         			'slug'     				=> 'siteorigin-panels', // The plugin slug (typically the folder name)
         			'required' 				=> true, // If false, the plugin is only 'recommended' instead of required
               'force_activation'		=> false,
         ),
         array(
-        			'name'     				=> esc_html__( "One Click Demo Import","tophot" ), // The plugin name
+        			'name'     				=> esc_html__( "One Click Demo Import","mellany" ), // The plugin name
         			'slug'     				=> 'one-click-demo-import', // The plugin slug (typically the folder name)
         			'required' 				=> true, // If false, the plugin is only 'recommended' instead of required
               'force_activation'		=> false,
         ),
         array(
-            'name'			=> esc_html__( "Magazin","tophot" ), // The plugin name
+            'name'			=> esc_html__( "Magazin","mellany" ), // The plugin name
             'slug'			=> 'magazin-extras', // The plugin slug (typically the folder name)
             'source'			=> get_template_directory() . '/all_plugins/magazin-extras.zip', // The plugin source
             'required'			=> true, // If false, the plugin is only 'recommended' instead of required
@@ -68,7 +68,7 @@ function tophot_register_required_plugins() {
      * end of each line for what each argument will be.
      */
     $config = array(
-      'id'           => 'tophot',                // Unique ID for hashing notices for multiple instances of TGMPA.
+      'id'           => 'mellany',                // Unique ID for hashing notices for multiple instances of TGMPA.
       'default_path' => '',                      // Default absolute path to bundled plugins.
       'menu'         => 'tgmpa-install-plugins', // Menu slug.
       'has_notices'  => true,                    // Show admin notices or not.

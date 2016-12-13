@@ -9,7 +9,7 @@
 
 </head>
 <?php
-$option = get_option("tophot_theme_options");
+$option = get_option("mellany_theme_options");
 $time = "";
 if  (!empty($option['menu_top_ad'])) {
 	 if  ($option['menu_top_ad']!="ad") {
@@ -43,13 +43,13 @@ if(!empty($style)){
 <?php if(!empty($option['mobile_header_type'])) { if($option['mobile_header_type']=="2") { ?>
 <div class="mt-smart-menu menu-background">
 	<span class="close pointer"></span>
-	<?php tophot_socials(); ?>
-	<?php tophot_nav_mobile(); ?>
+	<?php mellany_socials(); ?>
+	<?php mellany_nav_mobile(); ?>
 </div>
 <?php } } ?>
 
 <div class="mt-outer-wrap">
 
-<?php tophot_header_fixed(); ?>
+<?php mellany_header_fixed(); ?>
 
-<?php tophot_header(); ?>
+<?php mellany_header(); ?>
