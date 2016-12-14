@@ -68,11 +68,6 @@ add_action( 'after_setup_theme', 'mellany_theme_setup' );
 /* Default Options
 /*-----------------------------------------------------------------------------------*/
 
-function mellany_javascript_detection() {
-	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
-}
-add_action( 'wp_head', 'mellany_javascript_detection', 0 );
-
 if ( ! isset( $content_width ) ) {
 	$content_width = 740;
 }
