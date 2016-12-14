@@ -1014,7 +1014,7 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   display: none;
 }
 .icon-wrap {
-  min-height: 75px;
+  min-height: 48px;
   min-width: 53px;
 }
 .wather-content-inside {
@@ -1042,7 +1042,7 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 .head-weather i {
   color: #373e59;
   font-family: weather!important;
-  font-size: 74px;
+  font-size: 48px;
   font-weight: normal;
   font-style: normal;
   line-height: 1.0;
