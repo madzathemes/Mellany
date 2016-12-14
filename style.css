@@ -2381,7 +2381,7 @@ background-color: rgba(0,0,0,.6);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#e3383838',GradientType=0 );
 }
 .grid-post .poster-cat {
-  position: absolute;
+  position: relative;
   z-index: 9;
 }
 .grid-post .post-info {
