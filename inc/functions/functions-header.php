@@ -149,12 +149,12 @@ if(!empty($option['mobile_header_type'])) {
 
 
 function mellany_top_content() { $option = get_option("mellany_theme_options"); ?>
-		<div class="head-nav">
-			<?php if(!empty($option['url_latest'])) { ?><a <?php if($option['url_latest']==get_the_ID()) { ?>class="active"<?php } ?> href="<?php echo get_permalink(esc_html($option['url_latest'])); ?>"><?php esc_html_e( 'LATEST', 'mellany' ); ?> <span><?php esc_html_e( 'Posts', 'mellany' ); ?></span></a><?php } ?>
-			<?php if(!empty($option['url_popular'])) { ?><a <?php if($option['url_popular']==get_the_ID()) { ?>class="active"<?php } ?> href="<?php echo get_permalink(esc_html($option['url_popular'])); ?>"><?php esc_html_e( 'POPULAR', 'mellany' ); ?> <span><?php esc_html_e( 'Posts', 'mellany' ); ?></span></a><?php } ?>
-			<?php if(!empty($option['url_hot'])) { ?><a <?php if($option['url_hot']==get_the_ID()) { ?>class="active"<?php } ?> href="<?php echo get_permalink(esc_html($option['url_hot'])); ?>"><?php esc_html_e( 'HOT', 'mellany' ); ?> <span><?php esc_html_e( 'Posts', 'mellany' ); ?></span></a><?php } ?>
-			<?php if(!empty($option['url_trending'])) { ?>	<a <?php if($option['url_trending']==get_the_ID()) { ?>class="active"<?php } ?> href="<?php echo get_permalink(esc_html($option['url_trending'])); ?>"><?php esc_html_e( 'TRENDING', 'mellany' ); ?> <span><?php esc_html_e( 'Posts', 'mellany' ); ?></span></a><?php } ?>
-		</div>
+	<div class="head-nav">
+		<?php if(!empty($option['url_latest'])) { ?><a class="mt_l_latest <?php if($option['url_latest']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_latest'])); ?>"><?php esc_html_e( 'LATEST', 'mellany' ); ?> <span><?php esc_html_e( 'Posts', 'mellany' ); ?></span></a><?php } ?>
+		<?php if(!empty($option['url_popular'])) { ?><a class="mt_l_popular <?php if($option['url_popular']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_popular'])); ?>"><?php esc_html_e( 'POPULAR', 'mellany' ); ?> <span><?php esc_html_e( 'Posts', 'mellany' ); ?></span></a><?php } ?>
+		<?php if(!empty($option['url_hot'])) { ?><a class="mt_l_hot <?php if($option['url_hot']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_hot'])); ?>"><?php esc_html_e( 'HOT', 'mellany' ); ?> <span><?php esc_html_e( 'Posts', 'mellany' ); ?></span></a><?php } ?>
+		<?php if(!empty($option['url_trending'])) { ?>	<a class="mt_l_trending <?php if($option['url_trending']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_trending'])); ?>"><?php esc_html_e( 'TRENDING', 'mellany' ); ?> <span><?php esc_html_e( 'Posts', 'mellany' ); ?></span></a><?php } ?>
+	</div>
 
 		<?php if(!empty($option['header_time'])) { ?>
 			<?php if($option['header_time']=="on") { ?>

@@ -957,6 +957,32 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   font-size: 13px;
 }
 
+.mt_l_trending:before,
+.mt_l_hot:before,
+.mt_l_popular:before,
+.mt_l_latest:before {
+  content: "\67";
+  font-family: "madza";
+  position: absolute;
+  margin-left: -24px;
+  font-size: 18px;
+  margin-top:-2px;
+  color: #a5ce27;
+  font-weight: normal;
+}
+.mt_l_hot:before {
+  content: "\e9a9";
+  color: #ff0036;
+}
+.mt_l_popular:before {
+  content: "\e9d9";
+  color: #ffc600;
+}
+.mt_l_latest:before {
+  content: "\74";
+  color: #19191a;
+}
+
 /* HEAD TIME */
 .head-time {
   padding: 0px 20px 0px 10px;
