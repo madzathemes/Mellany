@@ -1015,10 +1015,10 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 }
 .icon-wrap {
   min-height: 48px;
-  min-width: 53px;
+  min-width: 35px;
 }
 .wather-content-inside {
-  min-height: 75px;
+  min-height: 48px;
 }
 .head-city {
   font-size: 13px;
@@ -1030,13 +1030,13 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   display: block !important;
 }
 .head-temp {
-  font-size: 21px;
+  font-size: 25px;
   color: #373e59;
 }
 .head-temp-unit {
   font-size: 13px;
   color: #373e59;
-  margin: 3px 0px 0px 5px;
+  margin: -5px 0px 0px 0px;
   font-weight: 700
 }
 .head-weather i {

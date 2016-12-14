@@ -159,8 +159,8 @@ function mellany_top_content() { $option = get_option("mellany_theme_options"); 
 		<?php if(!empty($option['header_time'])) { ?>
 			<?php if($option['header_time']=="on") { ?>
 				<div class="head-time">
-					<div id="time-live">00:00<span>:00</span></div>
-					<div class="time-date"><?php echo date( 'd M' ); ?></div>
+					<div id="time-live">00:00<span>:00</span> <?php echo date( 'd M' ); ?></div>
+					<div class="time-date"></div>
 				</div>
 			<?php } ?>
 		<?php } ?>
