@@ -983,6 +983,9 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 }
 
 /* HEAD TIME */
+.head-time {
+  text-align: center;
+}
 .head-time #time-live {
   font-size: 18px;
   color: #373e59;
@@ -999,8 +1002,8 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 
 /* HEAD WEATHER */
 .head-weather {
-  padding: 0px 10px;
-  min-width: 120px;
+  padding: 0px 0px;
+  text-align: center;
 }
 .head-weather div {
   display: inline-block;
