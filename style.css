@@ -936,7 +936,6 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 
 /* HEAD NAV */
 .head-nav {
-  padding: 0px 10px;
   text-align: left;
 }
 .head-nav a {
@@ -984,9 +983,6 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 }
 
 /* HEAD TIME */
-.head-time {
-  padding: 0px 20px 0px 10px;
-}
 .head-time #time-live {
   font-size: 18px;
   color: #373e59;
@@ -1112,7 +1108,6 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 
 /* HEAD BOOKMARK */
 .head-bookmark {
-  padding: 0px 0px 0px 22px;
   text-align: right;
 }
 .head-bookmark a {
