@@ -167,7 +167,7 @@ function mellany_top_content() { $option = get_option("mellany_theme_options"); 
 
 		<?php if(!empty($option['header_weather'])) { ?>
 			<?php if($option['header_weather']=="on") { ?>
-				<div class="weather-city hidden"><?php echo 'London'; ?></div>
+				<div class="weather-city hidden">London</div>
 				<div class="head-weather">
 					<div id="weather"></div>
 				</div>
