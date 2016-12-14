@@ -3035,7 +3035,7 @@ background-color: rgba(0,0,0,.6);
 
 /* FOOTER */
 .footer {
-  background: #24272c;
+  background: #000;
   z-index: 9999;
   position: relative;
 }
@@ -3055,7 +3055,7 @@ background-color: rgba(0,0,0,.6);
   padding: 40px 0px 10px;
 }
 .footer-bottom {
-  border-top: 1px solid #ff0036;
+  border-top: 1px solid #222;
 }
 .footer-bottom p{
   color: #aeaeae;
