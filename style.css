@@ -1735,7 +1735,8 @@ h2.heading::before {
   display: inline-block;
   background: white;
   padding: 3px 6px 3px 0px;
-  font-size: 14px;
+  font-size: 13px;
+  text-transform: uppercase;
 }
 .poster-data span,
 .poster-data .counte {
