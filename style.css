@@ -1124,14 +1124,6 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 .head-bookmark a:hover {
   color: #ff0036;
 }
-.head-bookmark a:before {
-  font-size: 13px;
-  margin: 4px 0px 0px -17px;
-  font-family: "madza";
-  content: "\63";
-  text-transform: none;
-  position: absolute;
-}
 
 /* HEAD MENU GLOBAL */
 .menu-background {
