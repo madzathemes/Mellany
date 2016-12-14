@@ -943,7 +943,7 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   color: #373e59;
   font-weight:900;
   font-size: 13px;
-  margin: 0px 10px;
+  margin: 0px 10px 0px 30px;
   padding: 5px 0px;
   display: inline-block;
 }
