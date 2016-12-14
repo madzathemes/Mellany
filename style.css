@@ -1003,6 +1003,7 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 /* HEAD WEATHER */
 .head-weather {
   padding: 0px 0px;
+  min-width: 120px;
   text-align: center;
 }
 .head-weather div {
