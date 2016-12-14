@@ -2371,7 +2371,7 @@ background-color: rgba(0,0,0,.6);
     bottom: 0;
     content: "";
     display: block;
-    height: 70%;
+    height: 100%;
     width: 100%;
     position: absolute;
     z-index: 2;
