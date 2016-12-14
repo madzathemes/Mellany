@@ -1009,6 +1009,8 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 .head-weather div {
   display: inline-block;
   vertical-align: middle;
+  text-align: left;
+  padding-left: 2px;
 }
 .head-weather p {
   display: none;
@@ -1018,12 +1020,12 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   min-width: 35px;
 }
 .head-city {
-  font-size: 13px;
+  font-size: 10px;
   color: #9d9da1;
   text-transform: capitalize;
   max-width: 80px;
   overflow: hidden;
-  margin-top: 18px;
+  margin: -3px 0px 0px 0px;
   display: block !important;
 }
 .head-temp {
