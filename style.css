@@ -2391,9 +2391,9 @@ background-color: rgba(0,0,0,.6);
 }
 
 .grid-post .poster-cat span {
-  background: #131313;
+  background: rgba(0, 0, 0, 0.5);
   color: white;
-  font-size: 11px;
+  font-size: 12px;
   padding: 5px 10px;
 }
 .grid-post.style-1.nr-3 .post-info,
