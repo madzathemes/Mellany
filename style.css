@@ -1025,7 +1025,7 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   text-transform: capitalize;
   max-width: 80px;
   overflow: hidden;
-  margin: -3px 0px 0px 0px;
+  margin: 0px 0px -3px 0px;
   display: block !important;
 }
 .head-temp {
@@ -1126,13 +1126,11 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 
 /* HEAD MENU GLOBAL */
 .menu-background {
-  background: #373e59;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#373e59+52,ff0036+100 */
-  background: #373e59; /* Old browsers */
-  background: -moz-linear-gradient(-45deg,  #373e59 52%, #ff0036 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg,  #373e59 52%,#ff0036 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg,  #373e59 52%,#ff0036 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#373e59', endColorstr='#ff0036',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: #0A0A0A;
+  background: -moz-linear-gradient(-45deg, #0A0A0A 52%, #0A0A0A 100%);
+  background: -webkit-linear-gradient(-45deg, #0A0A0A 52%,#0A0A0A 100%);
+  background: linear-gradient(135deg, #0A0A0A 52%,#0A0A0A 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0A0A0A', endColorstr='#0A0A0A',GradientType=1 );
 }
 .top-nav {
   color: white;

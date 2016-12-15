@@ -14,7 +14,6 @@ function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
 }
-
 jQuery(document).ready(function() {
   'use strict';
   var weatherlocation = jQuery('.weather-city').html();
@@ -24,7 +23,7 @@ jQuery(document).ready(function() {
     woeid: '',
     unit: 'c',
     success: function(weather) {
-      var html = '<div class="icon-wrap"><i class="icon-'+weather.code+'"></i></div><div class="weather-content"><div class="wather-content-inside"><div class="head-temp ">'+weather.temp+'</div><div class="head-temp-unit">&deg;'+weather.units.temp+'</div><div class="head-city">'+weather.city+'</div></div></div>';
+      var html = '<div class="icon-wrap"><i class="icon-'+weather.code+'"></i></div><div class="weather-content"><div class="wather-content-inside"><div class="head-city">'+weather.city+'</div><div class="head-temp ">'+weather.temp+'</div><div class="head-temp-unit">&deg;'+weather.units.temp+'</div></div></div>';
       jQuery("#weather").html(html);
     },
     error: function(error) {
