@@ -1320,7 +1320,7 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 }
 .fixed-top-menu ul li  a {
   text-transform: uppercase;
-  padding: 5px 25px 5px;
+  padding: 5px 15px 5px;
   display: inline-block;
   font-size: 13px;
   color: silver;
