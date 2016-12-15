@@ -1,5 +1,12 @@
 var today = new Date();
 var h = today.getHours();
+var today = new Date();
+var m = today.getMinutes();
+var s = today.getSeconds();
+m = checkTime(m);
+s = checkTime(s);
+document.getElementById('time-live').innerHTML =
+h + ":" + m + "<span>:" + s + "</span>";
 function startTime() {
     var today = new Date();
     var m = today.getMinutes();
