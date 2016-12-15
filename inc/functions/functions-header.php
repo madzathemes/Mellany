@@ -206,7 +206,7 @@ function mellany_logo() {
 		</a>
 	<?php } else { ?>
 		<a class="logo"  href="<?php echo esc_url(home_url('/'));?>">
-			<img src="<?php echo get_template_directory_uri(); ?>/inc/img/logo.png" width="200px" height="40px" alt="<?php echo the_title(); ?>" />
+			<img src="<?php echo get_template_directory_uri(); ?>/inc/img/logo.png" width="200" height="40" alt="<?php echo the_title(); ?>" />
 		</a>
 	<?php }
 }
