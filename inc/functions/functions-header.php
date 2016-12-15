@@ -159,7 +159,7 @@ function mellany_top_content() { $option = get_option("mellany_theme_options"); 
 		<?php if(!empty($option['header_time'])) { ?>
 			<?php if($option['header_time']=="on") { ?>
 				<div class="head-time">
-					<div id="time-live">00:00<span>:00</span> </div>
+					<div id="time-live">00:00<span>:00</span></div>
 					<div class="time-date"><?php echo date( 'd M' ); ?></div>
 				</div>
 			<?php } ?>
@@ -167,7 +167,21 @@ function mellany_top_content() { $option = get_option("mellany_theme_options"); 
 
 		<?php if(!empty($option['header_weather'])) { ?>
 			<?php if($option['header_weather']=="on") { ?>
-				<div class="weather-city hidden">London</div>
+				<div class="weather-city hidden"><?php
+					if ( ! empty( $_SERVER['HTTP_CLIENT_IP'] ) ) {
+						$ip = $_SERVER['HTTP_CLIENT_IP'];
+					} elseif ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
+						$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+					} else {
+						$ip = $_SERVER['REMOTE_ADDR'];
+					}
+					$query = @unserialize(wp_remote_fopen('http://ip-api.com/php/'.$ip));
+					if($query && $query['status'] == 'success') {
+						echo esc_attr($query['city']);
+					} else {
+						echo 'London';
+					}
+				?></div>
 				<div class="head-weather">
 					<div id="weather"></div>
 				</div>
