@@ -1,8 +1,7 @@
 <?php
 function mellany_header_script() {
 
-		wp_enqueue_style('mellany-', get_stylesheet_uri());
-		wp_enqueue_script('mellany-effects', get_template_directory_uri() . '/inc/js/effects.js', array('jquery'), '1.0', true);
+		wp_enqueue_style('mellany', get_stylesheet_uri());
 
 		$option = get_option("mellany_theme_options");
 		if  (!empty($option['menu_top_ad'])) {
@@ -38,7 +37,18 @@ function mellany_header_script() {
         }
         return $font_url;
     }
+
     wp_enqueue_style( 'mellany-fonts', mellany_fonts_url(), array(), '1.0.0' );
+		$time = "";
+		if (!empty($option['menu_top_ad'])) {
+			 if  ($option['menu_top_ad']!="ad") {
+				 $time = "ture";
+			 }
+		} else {
+			$time = "ture";
+		}
+		if(!empty($option['header_time']) and $time == "ture") { if($option['header_time']=="on") { wp_add_inline_script( 'mellany-fonts', 'window.onload=startTime;', 'before' ); }}
+
 }
 add_action('wp_enqueue_scripts', 'mellany_header_script');
 

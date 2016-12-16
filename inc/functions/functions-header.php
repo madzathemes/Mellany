@@ -43,7 +43,7 @@ if(!empty($option['mobile_header_type'])) {
 		<div class="nav-search-wrap pull-right">
 			<div class="nav-search pointer"></div>
 			<div class="nav-search-input">
-				<form method="get" id="searchform" action="<?php echo esc_url(home_url('/')); ?>/">
+				<form method="get" class="searchform" action="<?php echo esc_url(home_url('/')); ?>/">
 					<input type="text" placeholder="<?php esc_html_e( 'Type and hit enter to search ...', 'mellany' ); ?>"  name="s" >
 				</form>
 			</div>
@@ -102,7 +102,7 @@ if(!empty($option['mobile_header_type'])) {
 							<div class="nav-search-wrap pull-right">
 								<div class="nav-search pointer"></div>
 								<div class="nav-search-input">
-									<form method="get" id="searchform" action="<?php echo esc_url(home_url('/')); ?>/">
+									<form method="get" class="searchform" action="<?php echo esc_url(home_url('/')); ?>/">
 										<input type="text" placeholder="<?php esc_html_e( 'Type and hit enter to search ...', 'mellany' ); ?>"  name="s" >
 									</form>
 								</div>
@@ -146,7 +146,6 @@ if(!empty($option['mobile_header_type'])) {
 	</div>
 </div>
 <?php } add_filter('mellany_header','mellany_header');
-
 
 function mellany_top_content() { $option = get_option("mellany_theme_options"); ?>
 	<div class="head-nav">
