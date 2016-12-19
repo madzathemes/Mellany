@@ -1,7 +1,7 @@
 <?php
 function mellany_header_script() {
 
-		wp_enqueue_style('mellany', get_stylesheet_uri());
+		wp_enqueue_style('mellany-style', get_stylesheet_uri());
 
 		$option = get_option("mellany_theme_options");
 		if  (!empty($option['menu_top_ad'])) {
@@ -20,10 +20,12 @@ function mellany_header_script() {
 			}
 		}
 
-		wp_enqueue_script('mellany_html5shiv', get_template_directory_uri() . '/inc/js/html5shiv.js', array('jquery'), '1.0', true);
-		wp_script_add_data( 'mellany_html5shiv', 'conditional', 'lt IE 9' );
-		wp_enqueue_script('mellany_respondmin', get_template_directory_uri() . '/inc/js/respond.js', array('jquery'), '1.0', true);
-		wp_script_add_data( 'mellany_respondmin', 'conditional', 'lt IE 9' );
+		// Third party scripts/ styles don't need to be prefixed to avoid double loading
+		wp_enqueue_script('jquery-html5shiv', get_template_directory_uri() . '/inc/js/html5shiv.js', array('jquery'), '1.0', true);
+		wp_script_add_data( 'jquery-html5shiv', 'conditional', 'lt IE 9' );
+		wp_enqueue_script('jquery-respondmin', get_template_directory_uri() . '/inc/js/respond.js', array('jquery'), '1.0', true);
+		wp_script_add_data( 'jquery-respondmin', 'conditional', 'lt IE 9' );
+
     function mellany_fonts_url() {
 
       $theme_font = "Lato:400,900,700";

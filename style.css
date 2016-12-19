@@ -631,6 +631,7 @@ table {
   border-bottom: 0px solid#e4e4e4;
   padding-bottom: 0px;
 }
+.widget label.screen-reader-text { display: none; }
 .gallery-caption{}
 .bypostauthor{}
 .sticky {}
@@ -2755,7 +2756,21 @@ background-color: rgba(0,0,0,.6);
 }
 .single-share {
   position: relative;
+  display: inline-block;
 }
+.single-format-standard .single-share > a {
+  display: inline-block;
+}
+.post-style-4 .single-share,
+.post-style-4 .single-share > a,
+.single-share > a,
+.single-share  {
+  display: block;
+}
+.post-style-5 .single-cat-wrap {
+  text-align: center;
+}
+
 .single-share p {
   padding-right: 0px !important;
 }
@@ -3116,7 +3131,7 @@ background-color: rgba(0,0,0,.6);
     -moz-transform: translate(0,60px); /** Firefox **/
     right: 20px;
     position: fixed;
-    z-index: 999;
+    z-index: 9999;
 }
 .footer-scroll-to-top.active {
   -webkit-backface-visibility: hidden;

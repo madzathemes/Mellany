@@ -20,6 +20,7 @@ function repeatOften() {
 requestAnimationFrame(repeatOften);
 
 function hasScrolled() {
+  'use strict';
     var st = windowsz.scrollTop();
 
     // Make sure they scroll more than delta
@@ -39,10 +40,10 @@ function hasScrolled() {
 }
 
 
-  jQuery(window).resize(function () {
-    'use strict';
-       jQuery(this).trigger("scroll");
-   });
+jQuery(window).resize(function () {
+  'use strict';
+     jQuery(this).trigger("scroll");
+ });
 
 jQuery(document).ready(function() {
   'use strict';

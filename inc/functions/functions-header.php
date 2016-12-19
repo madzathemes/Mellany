@@ -229,7 +229,7 @@ function mellany_logo_mobile() {
 add_filter('mellany_logo_mobile','mellany_logo_mobile');
 
 function mellany_nav() {
-	if(class_exists('md_walker')) {
+	if(class_exists('md_walker_')) {
 		wp_nav_menu( array('theme_location'=>"primary",  'menu_class' => 'sf-menu', 'walker'	=> new md_walker, 'echo' => true, 'depth' => 3));
 	} else {
 		wp_nav_menu( array('theme_location'=>"primary",  'menu_class' => 'sf-menu', 'echo' => true, 'depth' => 3));

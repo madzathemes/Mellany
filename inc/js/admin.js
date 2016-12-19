@@ -1,4 +1,5 @@
 jQuery(document).ready(function() {
+  'use strict';
   jQuery('#magazin_metabox_post_gallery').hide();
   jQuery('#magazin_metabox_post_video').hide();
 
@@ -19,6 +20,4 @@ jQuery(document).ready(function() {
   jQuery('#post-format-0, #post-format-gallery').click(function() {
       jQuery('#magazin_metabox_post_video').hide();
   });
-
-
 });
