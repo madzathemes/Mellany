@@ -91,13 +91,13 @@ if(!empty($option['mobile_header_type'])) {
 						<div class="nav pull-left">
 							<?php mellany_nav(); ?>
 						</div>
-						<?php if(!empty($option['menu_random'])) { if($option['menu_random']=="1") { ?>
-							<div class="nav-random pull-right">
-								<a class="nav-random-btn pull-right" href="<?php echo get_site_url(); ?>/index.php?random=1">
-									<span><?php esc_html_e( 'Random', 'mellany' ); ?></span>
-								</a>
-							</div>
-						<?php } } ?>
+
+						<?php if(!empty($option['header_link_url'])) { ?>
+								<div class="nav-url pull-right">
+									<a href="<?php echo esc_url($option['header_link_url']);  ?>" <?php if(!empty($option['header_link_blank'])) { if($option['header_link_blank']=="1") {?>target="_blank" <?php }} ?>><?php echo balanceTags(get_theme_mod('mellany_header_link_name', 'Download mellany')); ?></a>
+								</div>
+						<?php } ?>
+
 						<?php if(!empty($option['menu_search'])) { if($option['menu_search']=="1") { ?>
 							<div class="nav-search-wrap pull-right">
 								<div class="nav-search pointer"></div>
@@ -108,6 +108,7 @@ if(!empty($option['mobile_header_type'])) {
 								</div>
 							</div>
 						<?php } } ?>
+
 					</div>
 				</div>
 				<div class="hover-menu-wrap">
@@ -164,34 +165,6 @@ function mellany_top_content() { $option = get_option("mellany_theme_options"); 
 			<?php } ?>
 		<?php } ?>
 
-		<?php if(!empty($option['header_weather'])) { ?>
-			<?php if($option['header_weather']=="on") { ?>
-				<div class="weather-city hidden"><?php
-					if ( ! empty( $_SERVER['HTTP_CLIENT_IP'] ) ) {
-						$ip = $_SERVER['HTTP_CLIENT_IP'];
-					} elseif ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
-						$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-					} else {
-						$ip = $_SERVER['REMOTE_ADDR'];
-					}
-					$query = @unserialize(wp_remote_fopen('http://ip-api.com/php/'.$ip));
-					if($query && $query['status'] == 'success') {
-						echo esc_attr($query['city']);
-					} else {
-						echo 'London';
-					}
-				?></div>
-				<div class="head-weather">
-					<div id="weather"></div>
-				</div>
-			<?php } ?>
-		<?php } ?>
-
-		<?php if(!empty($option['header_link_url'])) { ?>
-				<div class="head-bookmark">
-					<a href="<?php echo esc_url($option['header_link_url']);  ?>" <?php if(!empty($option['header_link_blank'])) { if($option['header_link_blank']=="1") {?>target="_blank" <?php }} ?>><?php echo balanceTags(get_theme_mod('mellany_header_link_name', 'Download mellany')); ?></a>
-				</div>
-		<?php } ?>
 <?php }
 add_filter('mellany_top_content','mellany_top_content');
 
