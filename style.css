@@ -1715,8 +1715,8 @@ h2.heading span {
 }
 .poster-cat span {
   display: inline-block;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 3px 9px 3px;
+  background: rgba(0, 0, 0, 0.33);
+  padding: 4px 9px 4px;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
@@ -1738,6 +1738,9 @@ h2.heading span {
 .poster-data:first-child i {
   padding-left: 0px;
 }
+.poster-info .poster-data {
+  display:none;
+}
 .poster h2 {
   padding: 10px 0px 10px;
   font-size: 21px;
@@ -1752,12 +1755,6 @@ h2.heading span {
   position: absolute;;
   top: 10px;
   right: 10px;
-}
-.poster.video .poster-info{
-  bottom: 10px;
-}
-.poster.video .poster-info .poster-data{
-  display:none
 }
 .poster-cat .poster-image {
   display: none;
