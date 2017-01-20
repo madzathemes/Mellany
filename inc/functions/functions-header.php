@@ -172,7 +172,7 @@ add_filter('mellany_top_content','mellany_top_content');
 
 function mellany_logo() {
 
-	$option = get_option("boomnews_theme_options");
+	$option = get_option("mellany_theme_options");
 
 	// Fix for SSL
 	if(!empty($option['header_logo'])) {
