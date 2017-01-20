@@ -940,7 +940,7 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   text-align: center;
 }
 .head-nav a {
-  color: #373e59;
+  color: #7a7c86;
   font-weight:900;
   font-size: 13px;
   margin: 0px 10px 0px 30px;
@@ -952,9 +952,21 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   color: #ff0036;
 }
 .head-nav a span {
-  color: #9d9da1;
   font-weight:400;
   font-size: 13px;
+}
+.head-social ul {
+  padding: 0px;
+  margin: 0px;
+}
+.head-social ul li {
+  display: inline;
+  list-style: none;
+}
+.head-social ul li a {
+  display: inline-block;
+  padding: 5px;
+  color: #7a7c86;
 }
 
 .mt_l_trending:before,
@@ -980,7 +992,7 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 }
 .mt_l_latest:before {
   content: "\74";
-  color: #19191a;
+  color: #7a7c86;
 }
 
 /* HEAD TIME */
@@ -1763,9 +1775,6 @@ h2.heading span {
   color: white;
   background: rgba(0, 0, 0, 0.33);
 }
-.poster.video .poster-data {
-  margin: 20px 0px -10px;
-}
 .poster.video .poster-image .video-icon {
   width: 100%;
   height: 100%;
@@ -1848,18 +1857,13 @@ h2.heading span {
 .poster.normal .poster-image {
   margin-right: 30px;
 }
-.poster.normal .poster-content {
-  padding-top: 30px;
-}
+.poster-content .poster-cat { display:none; }
 .poster.normal.img-empty .poster-content {
   padding-top:0px;
 }
 .poster:hover h2,
 .poster-small:hover h4{
   color: #ff0036;
-}
-.poster.normal.video .poster-content {
-  padding-top: 15px;
 }
 .poster.large {
   margin-bottom: 0px;
@@ -1910,13 +1914,16 @@ h2.heading span {
 }
 .poster-large-content-in {
   overflow: hidden;
-  bottom: 20px;
-  position: absolute;
+  height: 100%;
 }
 .poster-large-content p {
   padding: 10px 60px 15px 20px;
   font-size: 18px !important;
   line-height: 1.3;
+}
+.poster-large-con {
+  position: absolute;
+  bottom: 20px;
 }
 
 .poster-large-link {
@@ -1970,7 +1977,7 @@ h2.heading span {
 
 /* Post Carousel */
 .post-carousel {
-  padding-left: 10px;
+  padding-left: 60px;
   display: none;
   width: 100%;
   -webkit-tap-highlight-color: transparent;
@@ -1985,9 +1992,10 @@ h2.heading span {
 }
 .poster-next,
 .poster-prev{
-    padding: 7px 8px 4px 22px;
+    width: 40px;
+    height: 50%;
     float: left;
-    background: #222;
+    background: #7a7c86;
     color: white;
     z-index: 2;
     cursor: pointer;
@@ -1998,24 +2006,30 @@ h2.heading span {
   background: #ff0036;
 }
 .poster-next {
-  padding: 7px 22px 4px 8px;
-  right: 0;
+  padding: 7px 20px 4px 8px;
+  left: 10px;
   position: absolute;
-  bottom: 100%;
-  margin-bottom: -30px;
+  bottom: 0;
 }
 .poster-next:before {
   content: "\62";
-  font-family: "madza";
 }
 .poster-prev {
   left: 10px;
-  top: 53px;
+  top: 0px;
   position: absolute;
 }
 .poster-prev:before {
   content: "\61";
+}
+.poster-prev:before,
+.poster-next:before {
   font-family: "madza";
+  top: 50%;
+  left: 50%;
+  margin-left: -6px;
+  margin-top: -6px;
+  position: absolute;
 }
 
 /* Slider */
@@ -2608,7 +2622,7 @@ background-color: rgba(0,0,0,.6);
 
 /* Author BIO CHANGES */
 .mt-bio-social {
-  padding: 15px 0px 5px 50px;
+  padding: 0px 0px 20px 60px;
 }
 .mt-bio-social a {
   padding: 0px 3px 0px 0px;
@@ -2661,11 +2675,11 @@ background-color: rgba(0,0,0,.6);
 }
 
 .author-description h3 {
-  padding: 0px 0px 0px !important;
+  padding: 15px 0px 0px !important;
   font-size: 18px !important
 }
 .author-description h5 {
-  padding: 5px 0px 20px 50px;
+  padding: 5px 0px 5px 50px;
   font-size: 12px;
   color: #999;
   font-weight: 400;
@@ -3429,6 +3443,7 @@ background-color: rgba(0,0,0,.6);
   .poster .poster-content {
     padding-top: 0px !important;
   }
+
   .mt_comment_i_1,
   .mt_comment_i_2 {
     width: 100%;
@@ -3591,8 +3606,9 @@ background-color: rgba(0,0,0,.6);
   .post-carousel {
     padding-left: 0px !important;
   }
-  .poster-prev {
-    left: 0;
+  .poster-prev,
+  .poster-next {
+    display:none !important;
   }
 }
 @media all and (max-width: 545px) {
@@ -4368,3 +4384,14 @@ img.mfp-img {
     .mfp-with-zoom.mfp-removing.mfp-bg {
       opacity: 0;
     }
+
+
+/* Issue Fix */
+.page-template-default .theiaPostSlider_slides,
+.page-template-default .theiaPostSlider_slides > div {
+  overflow: visible !important;
+}
+.footer-wrap .yarpp-related,
+.footer-wrap #toc_container{
+  display:none !important;
+}
