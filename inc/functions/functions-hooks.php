@@ -4,27 +4,15 @@ function mellany_header_script() {
 		wp_enqueue_style('mellany-style', get_stylesheet_uri());
 
 		$option = get_option("mellany_theme_options");
-		if  (!empty($option['menu_top_ad'])) {
-			 if  ($option['menu_top_ad']!="ad") {
-				 if  (!empty($option['weather_type'])) {
-		 			 if  ($option['weather_type']=="f") {
-						 wp_enqueue_script('mellany-timeweather', get_template_directory_uri() . '/inc/js/timeweather_f.js', array('jquery'), '1.0', true);
-					 } else { wp_enqueue_script('mellany-timeweather', get_template_directory_uri() . '/inc/js/timeweather_c.js', array('jquery'), '1.0', true); }
-				 }
-			 }
-		} else {
-			if  (!empty($option['weather_type'])) {
-				if  ($option['weather_type']=="f") {
-					wp_enqueue_script('mellany-timeweather', get_template_directory_uri() . '/inc/js/timeweather_f.js', array('jquery'), '1.0', true);
-				} else { wp_enqueue_script('mellany-timeweather', get_template_directory_uri() . '/inc/js/timeweather_c.js', array('jquery'), '1.0', true); }
-			}
-		}
+
+		wp_enqueue_script( 'mellany_script', get_template_directory_uri(). '/inc/js/scripts.js', array( 'jquery'), '', true );
+		wp_localize_script( 'mellany_script', 'ajax_posts', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ), 'noposts' => esc_html__('No older posts found', 'mellany'), ));
 
 		// Third party scripts/ styles don't need to be prefixed to avoid double loading
-		wp_enqueue_script('jquery-html5shiv', get_template_directory_uri() . '/inc/js/html5shiv.js', array('jquery'), '1.0', true);
-		wp_script_add_data( 'jquery-html5shiv', 'conditional', 'lt IE 9' );
-		wp_enqueue_script('jquery-respondmin', get_template_directory_uri() . '/inc/js/respond.js', array('jquery'), '1.0', true);
-		wp_script_add_data( 'jquery-respondmin', 'conditional', 'lt IE 9' );
+		wp_enqueue_script('html5shiv', get_template_directory_uri() . '/inc/js/html5shiv.js', array('jquery'), '1.0', true);
+		wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
+		wp_enqueue_script('respondmin', get_template_directory_uri() . '/inc/js/respond.js', array('jquery'), '1.0', true);
+		wp_script_add_data( 'respondmin', 'conditional', 'lt IE 9' );
 
     function mellany_fonts_url() {
 

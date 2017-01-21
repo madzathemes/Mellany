@@ -99,47 +99,17 @@ if(!empty($option['mobile_header_type'])) {
 						<?php } ?>
 
 						<?php if(!empty($option['menu_search'])) { if($option['menu_search']=="1") { ?>
-							<div class="nav-search-wrap pull-right">
+							<div class="search-close"></div>
+							<div class="nav-search-wrap pull-right menu-background-right mt-radius">
 								<div class="nav-search pointer"></div>
-								<div class="nav-search-input">
-									<form method="get" class="searchform" action="<?php echo esc_url(home_url('/')); ?>/">
+								<div class="nav-search-input mt-radius">
+									<form method="get" action="<?php echo esc_url(home_url('/')); ?>/">
 										<input type="text" placeholder="<?php esc_html_e( 'Type and hit enter to search ...', 'mellany' ); ?>"  name="s" >
 									</form>
 								</div>
 							</div>
 						<?php } } ?>
 
-					</div>
-				</div>
-				<div class="hover-menu-wrap">
-					<div class="hover-menu">
-						<div class="row hide-mobile">
-							<?php if ( is_active_sidebar( 'menu-column-1' ) and is_active_sidebar( 'menu-column-2' ) and is_active_sidebar( 'menu-column-3' ) ) { ?>
-
-								<div class="col-md-4"><?php dynamic_sidebar( 'menu-column-1' ); ?></div>
-								<div class="col-md-4"><?php dynamic_sidebar( 'menu-column-2' ); ?></div>
-								<div class="col-md-4"><?php dynamic_sidebar( 'menu-column-3' ); ?></div>
-
-							<?php } else if ( is_active_sidebar( 'menu-column-1' ) and is_active_sidebar( 'menu-column-2' ) ) { ?>
-
-								<div class="col-md-4"><?php dynamic_sidebar( 'menu-column-1' ); ?></div>
-								<div class="col-md-4"><?php dynamic_sidebar( 'menu-column-2' ); ?></div>
-
-							<?php } else if ( is_active_sidebar( 'menu-column-1' ) ) { ?>
-
-								<div class="col-md-12"><?php dynamic_sidebar( 'menu-column-1' ); ?></div>
-
-							<?php } ?>
-						</div>
-						<?php if(!empty($option['mobile_header_type'])) { if($option['mobile_header_type']=="2") { } else { ?>
-							<div class="row hide-desktop">
-								<div class="col-md-12"><?php mellany_nav_mobile(); ?></div>
-							</div>
-						<?php } } else { ?>
-							<div class="row hide-desktop">
-								<div class="col-md-12"><?php mellany_nav_mobile(); ?></div>
-							</div>
-						<?php } ?>
 					</div>
 				</div>
 			</div>
