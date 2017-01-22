@@ -756,7 +756,7 @@ ul.sf-menu ul, div.sf-menu ul ul {
 }
 .df-is-megamenu ul {
   width: 100% !important;
-  background: #252b42;
+  background: #6a6d77;
   display: block!important;
   visibility: hidden;
   opacity: 0;
@@ -800,7 +800,7 @@ ul.sf-menu ul, div.sf-menu ul ul {
   white-space: pre-line;
   padding: 10px 10px 10px;
   margin-top: -25px;
-  background: #373e59;
+  background: #7a7c86;
   color: white;
   margin-bottom: 20px;
 }
