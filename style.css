@@ -1155,7 +1155,7 @@ ul.sf-menu ul li, div.sf-menu ul ul li {
 .nav-button:hover::before,
 .nav-button.active,
 .nav-button.active::before {
-  background: #efefef;
+  background: #676973;
 }
 
 .mt-m-left .mt-m-cool-button-line { margin-left:8px; }
