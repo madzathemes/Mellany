@@ -817,9 +817,10 @@ ul.sf-menu ul, div.sf-menu ul ul {
 }
 .df-is-megamenu ul .poster-cat {
     position: absolute;
-    bottom: 25px;
-    left: 0px;
+    top: 25px;
+    right: 0px;
     z-index: 999;
+    display:none;
 }
 .mega-post-wrap {
   padding: 20px 15px;
