@@ -815,6 +815,12 @@ ul.sf-menu ul, div.sf-menu ul ul {
     width: 100%;
     position: relative;
 }
+.df-is-megamenu ul .poster-cat {
+    position: absolute;
+    bottom: 3px;
+    left: 15px;
+    z-index: 999;
+}
 .mega-post-wrap {
   padding: 20px 15px;
 }
