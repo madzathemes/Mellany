@@ -817,8 +817,8 @@ ul.sf-menu ul, div.sf-menu ul ul {
 }
 .df-is-megamenu ul .poster-cat {
     position: absolute;
-    bottom: 3px;
-    left: 15px;
+    bottom: 25px;
+    left: 0px;
     z-index: 999;
 }
 .mega-post-wrap {
