@@ -810,6 +810,11 @@ ul.sf-menu ul, div.sf-menu ul ul {
 .megamenu-span a{
   display: block;
 }
+.mt-megamenu-img {
+    height: 150px;
+    width: 100%;
+    position: relative;
+}
 .mega-post-wrap {
   padding: 20px 15px;
 }
