@@ -10,9 +10,12 @@
 <?php } ?>
 <?php function mellany_single_social() {
 
+$share_top = "";
+$share_top = get_post_meta(get_the_ID(), "magazin_post_share_top", true);
+
 /* Share Meta from Magazin framework */
 $share = get_post_meta(get_the_ID(), "magazin_share_count", true);
-$shares = "";
+$shares = "0";
 if (class_exists('Kirki')) {
   $shares = magazin_get_shares(get_the_ID());
 }
@@ -20,11 +23,11 @@ if (!empty($share)){
 	$shares = $share+$shares;
 }
 /* View Meta from Magazin framework */
+/* View Meta from Magazin framework */
 $view = get_post_meta(get_the_ID(), "magazin_view_count", true);
-$viewes = "0";
-if (!empty($view)){
-	$viewes = $view;
-}
+$views = get_post_meta(get_the_ID(), "magazin_post_views_count", true);
+$viewes = $views + "0";
+if (!empty($view)){ $viewes = $view + $views; $viewes = number_format($viewes); }
 
 $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
 
@@ -58,10 +61,11 @@ $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
       </div>
     </div>
     <div class="post-statistic pull-left">
-      <span class="stat-shares color-silver-light"><?php echo esc_attr($shares); ?></span>
-      <span class="stat-views"><?php if(function_exists('magazin_PostViews')){   echo esc_attr($viewes) + magazin_PostViews(get_the_ID()); } ?></span>
+      <?php if(!empty($shares)){ ?><span class="stat-shares color-silver-light"><strong><?php echo esc_attr($shares); ?></strong> <?php echo esc_html__('Shares', 'mellany'); ?></span><?php } ?>
+      <?php if(!empty($viewes)){ ?><span class="stat-views"><strong><?php echo esc_attr($viewes) ?></strong> <?php echo esc_html__('Views', 'mellany'); ?></span><?php } ?>
       <?php if (get_comments_number()!="0") { ?><span class="stat-comments color-silver-light"><?php echo get_comments_number(); ?></span><?php } ?>
     </div>
+    <?php if($share_top=="" or $share_top == "yes"){ ?>
     <ul class="share top">
       <li class="share-facebook"><a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>" target="_blank"><span><?php echo esc_html__('Share Post', 'mellany'); ?></span></a></li>
       <li class="share-twitter"><a href="http://twitter.com/home/?status=<?php the_title(); ?>-<?php the_permalink(); ?>" target="_blank"><span><?php echo esc_html__('Share On Twitter', 'mellany'); ?></span></a></li>
@@ -71,6 +75,7 @@ $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
         <div class="share-more-wrap"><div class="share-more-icon">+</div></div>
       </li>
     </ul>
+    <?php } ?>
     <div class="clearfix"></div>
   </div>
 
