@@ -40,13 +40,13 @@ if(!empty($style)){
 	<div class="background-image lazyload" data-bg="<?php echo esc_url($option['background_image']); ?>"></div>
 <?php } ?>
 
-<?php if(!empty($option['mobile_header_type'])) { if($option['mobile_header_type']=="2") { ?>
+
 <div class="mt-smart-menu menu-background">
 	<span class="close pointer"></span>
 	<?php mellany_socials(); ?>
 	<?php mellany_nav_mobile(); ?>
 </div>
-<?php } } ?>
+
 
 <div class="mt-outer-wrap">
 
