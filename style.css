@@ -2595,7 +2595,7 @@ background-color: rgba(0,0,0,.6);
   display: block;
 }
 .stat-shares {
-  padding: 12px 10px 10px 40px;
+  padding: 12px 0px 10px 35px;
   font-size: 18px;
   display: inline-block;
 }
@@ -2622,7 +2622,7 @@ background-color: rgba(0,0,0,.6);
     margin-left: -20px;
 }
 .stat-comments {
-  padding: 12px 0px 10px 23px;
+  padding: 12px 0px 10px 35px;
   font-size: 18px;
   display: inline-block;
 }
