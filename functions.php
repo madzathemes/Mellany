@@ -69,7 +69,6 @@ add_action( 'after_setup_theme', 'mellany_theme_setup' );
 /*-----------------------------------------------------------------------------------*/
 
 
-
 if ( ! isset( $content_width ) ) {
 	$content_width = 740;
 }

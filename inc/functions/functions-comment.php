@@ -84,9 +84,9 @@ function mellany_comment( $comment, $args, $depth ) {
 								sprintf( esc_html__( '%1$s at %2$s', 'mellany' ), get_comment_date('n-j-Y' ), get_comment_time() )
 							)
 						);
-					?>
+					?><?php edit_comment_link( esc_html__( ' Edit', 'mellany' ), '<span class="edit-link">', '</span>' ); ?>
 
-					
+
 				</div><!-- .comment-author .vcard -->
 
 				<?php if ( $comment->comment_approved == '0' ) : ?>
@@ -98,7 +98,7 @@ function mellany_comment( $comment, $args, $depth ) {
 
 			<div class="comment-content"><?php comment_text(); ?></div>
 			<div class="clear"></div>
-			<?php comment_reply_link( array_merge( $args, array( 'reply_text' => esc_html__( 'Reply', 'mellany' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?><?php edit_comment_link( esc_html__( ' Edit', 'mellany' ), '<span class="edit-link">', '</span>' ); ?> 
+			<?php comment_reply_link( array_merge( $args, array( 'reply_text' => esc_html__( 'Reply', 'mellany' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 		</article><!-- #comment-## -->
 
 	<?php

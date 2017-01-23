@@ -27,12 +27,12 @@
 	 $mellany_allowed_html_array = array('a' => array( 'href' => array(), 'title' => array() ), 'br' => array(), 'i' => array('class' => array()),  'em' => array(), 'strong' => array(), 'div' => array('class' => array()), 'span' => array('class' => array()));
 
 ?>
-			<div class="navigation">
+			<div class="navigation mt-coment-nav">
 				<div class="nav-previous"><?php previous_comments_link( wp_kses(__( '<span class="meta-nav">&larr;</span> Older Comments', 'mellany' ), $mellany_allowed_html_array )); ?></div>
 				<div class="nav-next"><?php next_comments_link( wp_kses(__( 'Newer Comments <span class="meta-nav">&rarr;</span>', 'mellany' ) , $mellany_allowed_html_array )); ?></div>
 			</div> <!-- .navigation -->
 <?php endif; // check for comment navigation ?>
-
+<div class="clearfix"></div>
 			<ol class="commentlist">
 				<?php
 					wp_list_comments( array( 'callback' => 'mellany_comment' ) );
@@ -45,10 +45,11 @@
 
 	 $mellany_allowed_html_array = array('a' => array( 'href' => array(), 'title' => array() ), 'br' => array(), 'i' => array('class' => array()),  'em' => array(), 'strong' => array(), 'div' => array('class' => array()), 'span' => array('class' => array()));
 ?>
-			<div class="navigation">
+			<div class="navigation mt-coment-nav">
 				<div class="nav-previous"><?php previous_comments_link( wp_kses(__( '<span class="meta-nav">&larr;</span> Older Comments', 'mellany' ) , $mellany_allowed_html_array )); ?></div>
 				<div class="nav-next"><?php next_comments_link( wp_kses(__( 'Newer Comments <span class="meta-nav">&rarr;</span>', 'mellany' ) , $mellany_allowed_html_array )); ?></div>
 			</div><!-- .navigation -->
+      <div class="clearfix"></div>
 <?php endif; // check for comment navigation ?>
 
 <?php else : // or, if we don't have comments:

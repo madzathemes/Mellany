@@ -832,7 +832,8 @@ ul.sf-menu ul, div.sf-menu ul ul {
 .sf-menu a {
 	color: #13a;
 }
-.sf-menu > li > a::before {
+.sf-menu > li > a::before,
+div.sf-menu > ul > li > a::before {
   content: "";
   width: 100%;
   display: inline-block;
@@ -845,13 +846,20 @@ ul.sf-menu ul, div.sf-menu ul ul {
   background: #7a7c86;
   z-index: -1;
 }
-.sf-menu > li.current_page_item > a::before,
-.sf-menu > li > a:hover::before ,
+.sf-menu > li.current_page_item > a::before, div.sf-menu > ul > li.current_page_item > a::before,
+.sf-menu > li > a:hover::before, div.sf-menu > ul > li > a:hover::before,
 ul.sf-menu > li.current-cat > a::before, div.sf-menu ul > ul > li.current-cat > a::before,
 ul.sf-menu > li.current_page_item > a::before, div.sf-menu > ul > ul > li.current_page_item > a::before,
 ul.sf-menu > li.current-menu-item > a::before, div.sf-menu ul > ul > li.current-menu-item > a::before,
 ul.sf-menu > li.current-menu-ancestor > a::before, div.sf-menu > ul > ul > li.current-menu-ancestor > a::before {
   border: 1px solid white;
+}
+ul.sf-menu ul li.current-cat > a, div.sf-menu ul ul ul li.current-cat > a,
+ul.sf-menu ul li.current-menu-item > a, div.sf-menu ul ul ul li.current-menu-item > a,
+ul.sf-menu ul li.current_page_item > a, div.sf-menu ul ul ul li.current_page_item > a,
+ul.sf-menu ul li.current-menu-ancestor > a, div.sf-menu ul ul ul li.current-menu-ancestor > a,
+ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
+  background: #7a7c86 !important;
 }
 .sf-menu li {
 	white-space: nowrap; /* no need for Supersubs plugin */
@@ -2594,7 +2602,7 @@ background-color: rgba(0,0,0,.6);
   display: block;
 }
 .stat-shares {
-  padding: 12px 0px 10px 35px;
+  padding: 12px 0px 10px 40px;
   font-size: 18px;
   display: inline-block;
 }
@@ -2721,6 +2729,19 @@ background-color: rgba(0,0,0,.6);
   padding-right: 49px;
   padding-left: 0px;
 }
+.entry-content ul, .entry-content ol {
+    margin: 0px 0px 20px 20px;
+    padding: 0px;
+}
+blockquote {
+    font-size: 21px !important;
+    font-weight: 800;
+    margin: 20px 40px;
+    position: relative;
+}
+.page-template-default #coment-line-space {
+  margin-top:20px;
+}
 .single-format-standard .post-style-4 .single-content {
   margin-top: -120px;
   background: white;
@@ -2757,11 +2778,6 @@ background-color: rgba(0,0,0,.6);
   margin-bottom: 40px;
   position: relative;
 }
-.comment-respond:hover textarea,
-.comment-respond:hover input {
-  background: #e8e9ec;
-  border-color: #e8e9ec;
-}
 .comment-respond .logged-in-as {
   margin-top: -15px;
   font-size: 14px;
@@ -2780,6 +2796,21 @@ background-color: rgba(0,0,0,.6);
   color: #949494;
   margin: -10px 0px 20px;
   display: block;
+}
+.mt-coment-nav {
+  margin: 20px 0 0;
+}
+.mt-coment-nav a {
+    background: #ecedf1;
+    padding: 7px 10px;
+    font-size: 13px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.comment-edit-link {
+    font-size: 12px;
+    margin: 0px 10px;
+    text-transform: uppercase;
 }
 .mt_comment_i_1 {
   padding-right: 0px;
@@ -3105,12 +3136,7 @@ background-color: rgba(0,0,0,.6);
   .head-bookmark {
     display: none !important;
   }
-  .head-time,
-  .head-nav,
-  .head-logo,
-  .head-weather {
-    padding: 0px 0px;
-  }
+
   .head-weather {
     text-align: right;
   }
