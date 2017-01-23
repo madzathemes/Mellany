@@ -23,7 +23,6 @@ if (!empty($share)){
 	$shares = $share+$shares;
 }
 /* View Meta from Magazin framework */
-/* View Meta from Magazin framework */
 $view = get_post_meta(get_the_ID(), "magazin_view_count", true);
 $views = get_post_meta(get_the_ID(), "magazin_post_views_count", true);
 $viewes = $views + "0";
@@ -60,11 +59,13 @@ $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
         <small class="color-silver-light"><?php the_date('M d, Y'); ?></small>
       </div>
     </div>
-    <div class="post-statistic pull-left">
-      <?php if(!empty($shares)){ ?><span class="stat-shares color-silver-light"><strong><?php echo esc_attr($shares); ?></strong></span><?php } ?>
-      <?php if(!empty($viewes)){ ?><span class="stat-views"><strong><?php echo esc_attr($viewes) ?></strong> </span><?php } ?>
-      <?php if (get_comments_number()!="0") { ?><span class="stat-comments color-silver-light"><?php echo get_comments_number(); ?></span><?php } ?>
-    </div>
+    <?php if(class_exists('md_walker')) { ?>
+      <div class="post-statistic pull-left">
+        <?php if(!empty($shares)){ ?><span class="stat-shares color-silver-light"><strong><?php echo esc_attr($shares); ?></strong></span><?php } ?>
+        <?php if(!empty($viewes)){ ?><span class="stat-views"><strong><?php echo esc_attr($viewes) ?></strong> </span><?php } ?>
+        <?php if (get_comments_number()!="0") { ?><span class="stat-comments color-silver-light"><?php echo get_comments_number(); ?></span><?php } ?>
+      </div>
+    <?php } ?>
     <?php if($share_top=="" or $share_top == "yes"){ ?>
     <ul class="share top">
       <li class="share-facebook"><a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>" target="_blank"><span><?php echo esc_html__('Share Post', 'mellany'); ?></span></a></li>

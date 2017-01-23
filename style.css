@@ -2608,7 +2608,7 @@ background-color: rgba(0,0,0,.6);
     margin-left: -20px;
 }
 .stat-views {
-  padding: 12px 10px 10px 15px;
+  padding: 12px 0px 10px 35px;
   font-size: 18px;
   display: inline-block;
   color: #6b8db9
