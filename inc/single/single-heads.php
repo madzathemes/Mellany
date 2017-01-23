@@ -61,8 +61,8 @@ $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
       </div>
     </div>
     <div class="post-statistic pull-left">
-      <?php if(!empty($shares)){ ?><span class="stat-shares color-silver-light"><strong><?php echo esc_attr($shares); ?></strong> <?php echo esc_html__('Shares', 'mellany'); ?></span><?php } ?>
-      <?php if(!empty($viewes)){ ?><span class="stat-views"><strong><?php echo esc_attr($viewes) ?></strong> <?php echo esc_html__('Views', 'mellany'); ?></span><?php } ?>
+      <?php if(!empty($shares)){ ?><span class="stat-shares color-silver-light"><strong><?php echo esc_attr($shares); ?></strong></span><?php } ?>
+      <?php if(!empty($viewes)){ ?><span class="stat-views"><strong><?php echo esc_attr($viewes) ?></strong> </span><?php } ?>
       <?php if (get_comments_number()!="0") { ?><span class="stat-comments color-silver-light"><?php echo get_comments_number(); ?></span><?php } ?>
     </div>
     <?php if($share_top=="" or $share_top == "yes"){ ?>
