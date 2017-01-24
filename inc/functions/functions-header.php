@@ -39,7 +39,7 @@ if(!empty($option['mobile_header_type'])) {
 		</div>
 	</div>
 	<div class="mt-mobile-logo"><?php mellany_logo_mobile(); ?></div>
-	<?php if(!empty($option['menu_search'])) { if($option['menu_search']=="1") { ?>
+	<?php if ( true == get_theme_mod( 'mt_menu_search', true ) ) { ?>
 		<div class="nav-search-wrap pull-right">
 			<div class="nav-search pointer"></div>
 			<div class="nav-search-input">
@@ -48,7 +48,7 @@ if(!empty($option['mobile_header_type'])) {
 				</form>
 			</div>
 		</div>
-	<?php } } ?>
+	<?php } ?>
 </div>
 <div class="mt-header-space hide-desktop"></div>
 <?php } } ?>
@@ -82,7 +82,7 @@ if(!empty($option['mobile_header_type'])) {
 				<div class="col-md-12">
 					<div class="top-nav <?php echo esc_attr($menu_boxed); ?> container-fluid">
 
-						<div class="nav-button pointer pull-left <?php if(empty($option['menu_small_on'])) { ?>hide-desktop<?php } ?>">
+						<div class="nav-button pointer pull-left <?php if ( false == get_theme_mod( 'mt_menu_small_on', true ) ) { ?>hide-desktop<?php } ?>">
 							<div class="mt-m-cool-button">
 								<span class="mt-m-cool-button-line"></span>
 							</div>
@@ -94,11 +94,11 @@ if(!empty($option['mobile_header_type'])) {
 
 						<?php if(!empty($option['header_link_url'])) { ?>
 								<div class="nav-url pull-right">
-									<a href="<?php echo esc_url($option['header_link_url']);  ?>" <?php if(!empty($option['header_link_blank'])) { if($option['header_link_blank']=="1") {?>target="_blank" <?php }} ?>><?php echo balanceTags(get_theme_mod('mellany_header_link_name', 'Download mellany')); ?></a>
+									<a href="<?php echo esc_url($option['header_link_url']);  ?>" <?php if ( true == get_theme_mod( 'mt_header_link_blank', true ) ) {  ?>target="_blank" <?php } ?>><?php echo balanceTags(get_theme_mod('mellany_header_link_name', 'Download mellany')); ?></a>
 								</div>
 						<?php } ?>
 
-						<?php if(!empty($option['menu_search'])) { if($option['menu_search']=="1") { ?>
+						<?php if ( true == get_theme_mod( 'mt_menu_search', true ) ) { ?>
 							<div class="search-close"></div>
 							<div class="nav-search-wrap pull-right menu-background-right mt-radius">
 								<div class="nav-search pointer"></div>
@@ -108,7 +108,7 @@ if(!empty($option['mobile_header_type'])) {
 									</form>
 								</div>
 							</div>
-						<?php } } ?>
+						<?php } ?>
 
 					</div>
 				</div>
@@ -125,17 +125,17 @@ function mellany_top_content() { $option = get_option("mellany_theme_options"); 
 		<?php if(!empty($option['url_hot'])) { ?><a class="mt_l_hot <?php if($option['url_hot']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_hot'])); ?>"><?php esc_html_e( 'HOT', 'mellany' ); ?> <span><?php esc_html_e( 'Posts', 'mellany' ); ?></span></a><?php } ?>
 		<?php if(!empty($option['url_trending'])) { ?>	<a class="mt_l_trending <?php if($option['url_trending']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_trending'])); ?>"><?php esc_html_e( 'TRENDING', 'mellany' ); ?> <span><?php esc_html_e( 'Posts', 'mellany' ); ?></span></a><?php } ?>
 	</div>
-	<div class="head-social">
-		<?php mellany_socials(); ?>
-	</div>
-		<?php if(!empty($option['header_time'])) { ?>
-			<?php if($option['header_time']=="on") { ?>
-				<div class="head-time">
-					<div id="time-live">00:00<span>:00</span></div>
-					<div class="time-date"><?php echo date( 'd M' ); ?></div>
-				</div>
-			<?php } ?>
-		<?php } ?>
+	<?php  if ( true == get_theme_mod( 'mt_header_social', true ) ) { ?>
+		<div class="head-social">
+			<?php mellany_socials(); ?>
+		</div>
+	<?php } ?>
+	<?php  if ( true == get_theme_mod( 'mt_header_time', true ) ) { ?>
+			<div class="head-time">
+				<div id="time-live">00:00<span>:00</span></div>
+				<div class="time-date"><?php echo date( 'd M' ); ?></div>
+			</div>
+	<?php } ?>
 
 <?php }
 add_filter('mellany_top_content','mellany_top_content');

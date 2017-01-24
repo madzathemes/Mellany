@@ -501,46 +501,69 @@ function mellany_customize_header($wp_customize){
    ));
 
 
-   Kirki::add_field( 'mellany_theme_options[header_link_blank]', array(
+   Kirki::add_field( 'mt_header_link_blank', array(
       'type'        => 'switch',
-      'settings'    => 'mellany_theme_options[header_link_blank]',
+      'settings'    => 'mt_header_link_blank',
       'label'       => esc_html__( 'Header Button Open In New Tap', 'mellany' ),
       'section'     => 'mellany_header_top',
-      'default'     => '2',
-       'option_type' => 'option',
+      'default'     => 'on',
       'priority'    => 10,
       'choices'     => array(
-        '1'  => esc_attr__( 'Enable', 'mellany' ),
-        '2' => esc_attr__( 'Disable', 'mellany' ),
+        'on'  => esc_attr__( 'On', 'mellany' ),
+        'off' => esc_attr__( 'Off', 'mellany' ),
       ),
    ) );
 
-   Kirki::add_field( 'mellany_theme_options[menu_small_on]', array(
+   Kirki::add_field( 'mt_menu_small_on', array(
      	'type'        => 'switch',
-     	'settings'    => 'mellany_theme_options[menu_small_on]',
+     	'settings'    => 'mt_menu_small_on',
      	'label'       => esc_attr__( 'Small Menu For Desktop', 'mellany' ),
      	'section'     => 'mellany_header_top',
-     	'default'     => '0',
-      'option_type' => 'option',
+     	'default'     => 'on',
      	'priority'    => 10,
      	'choices'     => array(
-     		'1'  => esc_attr__( 'Enable', 'mellany' ),
-     		'2' => esc_attr__( 'Disable', 'mellany' ),
+        'on'  => esc_attr__( 'On', 'mellany' ),
+        'off' => esc_attr__( 'Off', 'mellany' ),
      	),
    ) );
 
 
-   Kirki::add_field( 'mellany_theme_options[menu_search]', array(
+   Kirki::add_field( 'mt_menu_search', array(
        'type'        => 'switch',
-       'settings'    => 'mellany_theme_options[menu_search]',
+       'settings'    => 'mt_menu_search',
        'label'       => esc_attr__( 'Search Button', 'mellany' ),
        'section'     => 'mellany_header_top',
-       'default'     => '0',
-       'option_type' => 'option',
+       'default'     => 'on',
        'priority'    => 10,
        'choices'     => array(
-         '1'  => esc_attr__( 'Enable', 'mellany' ),
-         '2' => esc_attr__( 'Disable', 'mellany' ),
+         'on'  => esc_attr__( 'On', 'mellany' ),
+         'off' => esc_attr__( 'Off', 'mellany' ),
+       ),
+   ) );
+
+   Kirki::add_field( 'mt_header_social', array(
+       'type'        => 'switch',
+       'settings'    => 'mt_header_social',
+       'label'       => esc_attr__( 'Header Social', 'mellany' ),
+       'section'     => 'mellany_header_top',
+       'default'     => 'on',
+       'priority'    => 10,
+       'choices'     => array(
+         'on'  => esc_attr__( 'On', 'mellany' ),
+         'off' => esc_attr__( 'Off', 'mellany' ),
+       ),
+   ) );
+
+   Kirki::add_field( 'mt_header_time', array(
+       'type'        => 'switch',
+       'settings'    => 'mt_header_time',
+       'label'       => esc_attr__( 'Time and Date', 'mellany' ),
+       'section'     => 'mellany_header_top',
+       'default'     => 'on',
+       'priority'    => 10,
+       'choices'     => array(
+         'on'  => esc_attr__( 'On', 'mellany' ),
+         'off' => esc_attr__( 'Off', 'mellany' ),
        ),
    ) );
 
@@ -600,22 +623,6 @@ function mellany_customize_header($wp_customize){
 			'priority'   => 5,
 		));
 
-		// Time widget
-		$wp_customize->add_setting('mellany_theme_options[header_time]', array(
-				'capability'     => 'edit_theme_options',
-				'type'           => 'option',
-				'sanitize_callback' => 'esc_attr',
-			));
-		$wp_customize->add_control( 'mellany_theme_options[header_time]', array(
-				'settings' => 'mellany_theme_options[header_time]',
-				'label'    	=> esc_html__('Time and Date', 'mellany'),
-				'section' => 'mellany_header_top',
-				'type'    => 'select',
-				'choices'    => array(
-					'off' => 'off',
-					'on' => 'on',
-				),
-		));
 
 
 		$wp_customize->add_setting('mellany_theme_options[header_link_url]', array(
