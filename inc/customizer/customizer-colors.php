@@ -114,6 +114,25 @@ function mellany_customize_colors($wp_customize){
       ),
    ));
 
+   Kirki::add_field( 'mt_colors_time', array(
+     'type'        => 'multicolor',
+     'settings'    => 'mt_colors_time',
+     'label'       => esc_attr__( 'Time', 'mellany' ),
+     'section'     => 'colors_menu',
+     'option_type' => 'option',
+     'priority'    => 1,
+     'choices'     => array(
+         'clock'    => esc_attr__( 'Clock', 'mellany' ),
+         'seconds'   => esc_attr__( 'Seconds', 'mellany' ),
+         'date'  => esc_attr__( 'Date', 'mellany' ),
+     ),
+     'default'     => array(
+         'clock'    => '',
+         'seconds'    => '',
+         'date'    => ''
+     ),
+   ));
+
 
   Kirki::add_field( 'mt_colors_header_button', array(
     'type'        => 'multicolor',
@@ -378,26 +397,6 @@ function mellany_customize_colors($wp_customize){
         'text'    => '',
         'link'    => '',
         'hover'    => '',
-    ),
-  ));
-
-  Kirki::add_field( 'mt_colors_footer_icons', array(
-    'type'        => 'multicolor',
-    'settings'    => 'mt_colors_footer_icons',
-    'label'       => esc_attr__( 'Footer Bottom Icons', 'mellany' ),
-    'section'     => 'colors_footer',
-    'option_type' => 'option',
-    'choices'     => array(
-        'latest'    => esc_attr__( 'Latest', 'mellany' ),
-        'popular'   => esc_attr__( 'Popular', 'mellany' ),
-        'hot'  => esc_attr__( 'Hot', 'mellany' ),
-        'trending'  => esc_attr__( 'Trending', 'mellany' ),
-    ),
-    'default'     => array(
-        'latest'    => '',
-        'popular'    => '',
-        'hot'    => '',
-        'trending'    => '',
     ),
   ));
 

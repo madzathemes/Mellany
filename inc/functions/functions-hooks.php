@@ -13,19 +13,13 @@ function mellany_css() {
 			.mt-theme-text,
 			.fixed-top-menu ul li a:hover,
 			a:hover,
+			.poster:hover h2, .poster-small:hover h4,
 			.nav-single .next div:after,
 			.nav-single .previous div:before { color:'. esc_attr($options['colors_default']) .'; }
 			.mt-theme-background,
 			button:hover,
 			input[type="submit"]:hover,
 			input[type="button"]:hover,
-			.sf-menu > li.current_page_item > a::before,
-			.sf-menu > li > a::before,
-			ul.sf-menu ul li.current-cat > a, div.sf-menu ul ul ul li.current-cat > a,
-			ul.sf-menu ul li.current-menu-item > a, div.sf-menu ul ul ul li.current-menu-item > a,
-			ul.sf-menu ul li.current_page_item > a, div.sf-menu ul ul ul li.current_page_item > a,
-			ul.sf-menu ul li.current-menu-ancestor > a, div.sf-menu ul ul ul li.current-menu-ancestor > a,
-			ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover,
 			.head-bookmark a:hover,
 			.hover-menu a:hover,
 			.nav-links a:hover,
@@ -87,24 +81,22 @@ function mellany_css() {
 
 	 $options_in = get_option("mt_colors_header_button");
 	 if(!empty($options_in['text']) and !empty($options_in['background'])){if($options_in['background']!='#fffff1'){
-		 $custom_styles .='.head-bookmark a { color:'. esc_attr($options_in['text']) .'!important; background-color:'. esc_attr($options_in['background']) .'!important; }';
+		 $custom_styles .='.nav-url a { color:'. esc_attr($options_in['text']) .'!important; background-color:'. esc_attr($options_in['background']) .'!important; }';
 	 }}
 	 if(!empty($options_in['text_hover']) and !empty($options_in['background_hover'])){if($options_in['background_hover']!='#fffff1'){
-		 $custom_styles .='.head-bookmark a:hover { color:'. esc_attr($options_in['text_hover']) .'!important; background-color:'. esc_attr($options_in['background_hover']) .'!important; }';
+		 $custom_styles .='.nav-url a:hover { color:'. esc_attr($options_in['text_hover']) .'!important; background-color:'. esc_attr($options_in['background_hover']) .'!important; }';
 	 }}
 
 	 // Menu
 	 $options_in = get_option("mt_colors_menu_bg");
-	 if(!empty($options_in['in'])){ if($options_in['in']!='#fffff1'){ $custom_styles .='.menu-background, .menu-background-left, .menu-background-right, .menu-background-mobile,.mt-header-mobile .nav-search-input input,.mt-header-mobile.search-on .nav-search-wrap:hover { background-color:'. esc_attr($options_in['in']) .'!important; }'; }}
+	 if(!empty($options_in['in'])){ if($options_in['in']!='#fffff1'){ $custom_styles .='.sf-menu > li > a::before, div.sf-menu > ul > li > a::before { border-color:'. esc_attr($options_in['in']) .'; } .menu-background, .menu-background-left, .menu-background-right, .menu-background-mobile,.mt-header-mobile .nav-search-input input,.mt-header-mobile.search-on .nav-search-wrap:hover { background-color:'. esc_attr($options_in['in']) .'!important; }'; }}
 	 if(!empty($options_in['out'])){ if($options_in['out']!='#fffff1'){$custom_styles .='.header-menu { background-color:'. esc_attr($options_in['out']) .'!important; }'; }}
 
 	 // Menu Links
 	 $options_in = get_option("mt_colors_menu_link");
 	 if(!empty($options_in['text'])){if($options_in['text']!='#fffff1'){
 		 $custom_styles .='.top-nav a, .top-nav { color:'. esc_attr($options_in['text']) .'!important; }';
-	 }} else if(!empty($options['colors_menu'])){
-		 $custom_styles .='.top-nav a, .top-nav { color:'. esc_attr($options['colors_menu']) .'!important; }';
-	 }
+	 }}
 
 	 if(!empty($options_in['text_hover'])){ if($options_in['text_hover']!='#fffff1'){
 		 $custom_styles .='.sf-menu li a:hover,
@@ -115,21 +107,10 @@ function mellany_css() {
 		 ul.sf-menu li.current-menu-item > a, div.sf-menu ul ul li.current-menu-item > a,
 		 ul.sf-menu li.current-menu-ancestor > a, div.sf-menu ul ul li.current-menu-ancestor > a,
 		 .sf-menu li.current_page_item::before, .sf-menu li:hover::before { color: '. esc_attr($options_in['text_hover']) .'!important}';
-	 }} else if(!empty($options['colors_menu_hover_text'])){
-		 	$custom_styles .='.sf-menu li a:hover,
-		 	.sf-menu > li:hover > a,
-		 	.sf-menu li.sfHover,
-		 	ul.sf-menu li.current-cat > a, div.sf-menu ul ul li.current-cat > a,
-		 	ul.sf-menu li.current_page_item > a, div.sf-menu ul ul li.current_page_item > a,
-		 	ul.sf-menu li.current-menu-item > a, div.sf-menu ul ul li.current-menu-item > a,
-		 	ul.sf-menu li.current-menu-ancestor > a, div.sf-menu ul ul li.current-menu-ancestor > a,
-		 	.sf-menu li.current_page_item::before, .sf-menu li:hover::before { color: '. esc_attr($options['colors_menu_hover_text']) .'!important}';
-		}
+	 }}
 		 if(!empty($options_in['text'])){ if($options_in['text']!='#fffff1'){
 			 $custom_styles .='.sf-menu > li.current_page_item > a::before, .sf-menu > li > a::before { background: '. esc_attr($options_in['border']) .'!important}';
-		 }} else if(!empty($options['colors_menu_hover'])){
- 		 	$custom_styles .='.sf-menu > li.current_page_item > a::before, .sf-menu > li > a::before { background: '. esc_attr($options['colors_menu_hover']) .'!important}';
-		}
+		 }}
 
 		// Menu Links Sub
 		$options_in = get_option("mt_colors_menu_link_sub");
@@ -140,13 +121,7 @@ function mellany_css() {
 			 }}
 			 if(!empty($options_in['background'])){if($options_in['background']!='#fffff1'){ $custom_styles .='.sf-menu ul li a, .sf-menu ul li, .df-is-megamenu ul, .df-is-megamenu ul li .mega-post-in a:hover { background-color:'. esc_attr($options_in['background']) .'!important; }'; }}
 
-		 } else if(!empty($options['colors_menu_sub']) or !empty($options['colors_menu_sub_background'])){
-			$custom_styles .='.sf-menu ul li a {';
-					if(!empty($options['colors_menu_sub'])){ $custom_styles .=' color: '. esc_attr($options['colors_menu_sub']).'!important;'; }
-					if(!empty($options['colors_menu_sub_background'])){ $custom_styles .=' background: '. esc_attr($options['colors_menu_sub_background']).'!important;'; }
-			$custom_styles .='}';
-				if(!empty($options['colors_menu_sub_background'])){ $custom_styles .=' .sf-menu ul li, .df-is-megamenu ul { background:'. esc_attr($options['colors_menu_sub_background']).'!important}'; }
-		}
+		 }
 
 		if(!empty($options_in)){
 			 if(!empty($options_in['text_hover']) and !empty($options_in['background_hover'])){if($options_in['background_hover']!='#fffff1'){
@@ -159,16 +134,7 @@ function mellany_css() {
 					 if(!empty($options_in['text_hover'])){ $custom_styles .='color:'. esc_attr($options_in['text_hover']) .'!important;'; }
 				$custom_styles .='}';
 			}}
-	 	} else if(!empty($options['colors_menu_sub_hover']) or !empty($options['colors_menu_sub_hover_background'])){
-			$custom_styles .='ul.sf-menu ul li.current-cat > a, div.sf-menu ul ul ul li.current-cat > a,
-			ul.sf-menu ul li.current-menu-item > a, div.sf-menu ul ul ul li.current-menu-item > a,
-			ul.sf-menu ul li.current_page_item > a, div.sf-menu ul ul ul li.current_page_item > a,
-			ul.sf-menu ul li.current-menu-ancestor > a, div.sf-menu ul ul ul li.current-menu-ancestor > a,
-			ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {';
-				 if(!empty($options['colors_menu_sub_hover_background'])){ $custom_styles .='background:'. esc_attr($options['colors_menu_sub_hover_background']) .'!important;'; }
-				 if(!empty($options['colors_menu_sub_hover'])){ $custom_styles .='color:'. esc_attr($options['colors_menu_sub_hover']) .'!important;'; }
-			$custom_styles .='}';
-		}
+	 	}
 
 		if(!empty($options['colors_menu_sub'])){
 			$custom_styles .='.megamenu-span h4 { color:'. esc_attr($options['colors_menu_sub']) .'!important; }';
@@ -213,24 +179,26 @@ function mellany_css() {
 			 .nav-search-input:hover input::-moz-placeholder { color:'. esc_attr($options_in['text_hover']) .'!important; }
 			 .nav-search-input:hover input:-ms-input-placeholder { color:'. esc_attr($options_in['text_hover']) .'!important; }';
 		 }}
-		 if(empty($options_in)){
-			 if(!empty($options['colors_menu'])){
-				 $custom_styles .='
-				 .nav-search-input input,.nav-search-input:before { color:'. esc_attr($options['colors_menu']) .'!important; }
-				 .nav-search-input input::-webkit-input-placeholder { color:'. esc_attr($options['colors_menu']) .'!important; }
-				 .nav-search-input input:-moz-placeholder { color:'. esc_attr($options['colors_menu']) .'!important; }
-				 .nav-search-input input::-moz-placeholder { color:'. esc_attr($options['colors_menu']) .'!important; }
-				 .nav-search-input input:-ms-input-placeholder { color:'. esc_attr($options['colors_menu']) .'!important; }';
-			 }
-		 }
 
 		 $options_in = get_option("mt_colors_menu_icon");
  	 	 if(!empty($options_in['text'])){if($options_in['text']!='#fffff1'){
- 	 		 $custom_styles .='.top-nav .social a { color:'. esc_attr($options_in['text']) .'!important; }';
+ 	 		 $custom_styles .='.head-social .social a { color:'. esc_attr($options_in['text']) .'!important; }';
  	 	 }}
 		 if(!empty($options_in['hover'])){if($options_in['hover']!='#fffff1'){
- 	 		 $custom_styles .='.top-nav .social a:hover { color:'. esc_attr($options_in['hover']) .'!important; }';
+ 	 		 $custom_styles .='.head-social .social a:hover { color:'. esc_attr($options_in['hover']) .'!important; }';
  	 	 }}
+
+		 $options_in = get_option("mt_colors_time");
+ 	 	 if(!empty($options_in['clock'])){if($options_in['clock']!='#fffff1'){
+ 	 		 $custom_styles .='#time-live { color:'. esc_attr($options_in['clock']) .'!important; }';
+ 	 	 }}
+		 if(!empty($options_in['seconds'])){if($options_in['seconds']!='#fffff1'){
+ 	 		 $custom_styles .='#time-live span { color:'. esc_attr($options_in['seconds']) .'!important; }';
+ 	 	 }}
+		 if(!empty($options_in['date'])){if($options_in['date']!='#fffff1'){
+ 	 		 $custom_styles .='.time-date { color:'. esc_attr($options_in['date']) .'!important; }';
+ 	 	 }}
+
 
 		 $options_in = get_option("mt_colors_header_mobile");
 	 	 if(!empty($options_in['background'])){if($options_in['background']!='#fffff1'){
@@ -316,12 +284,6 @@ function mellany_css() {
 			if(!empty($options_in['text'])){ if($options_in['text']!='#fffff1'){ $custom_styles .='.footer-top p { color:'. esc_attr($options_in['text']) .'!important; }'; } }
 			if(!empty($options_in['link'])){ if($options_in['link']!='#fffff1'){ $custom_styles .='.footer-nav a, .footer .mail { color:'. esc_attr($options_in['link']) .'!important; }'; } }
 			if(!empty($options_in['hover'])){ if($options_in['hover']!='#fffff1'){ $custom_styles .='.footer-top a:hover, .footer .mail:hover { color:'. esc_attr($options_in['hover']) .'!important; }'; } }
-		} else {
-			if(!empty($options['colors_footer_top_background'])){ $custom_styles .=' .footer-top { background: '. esc_attr($options['colors_footer_top_background']) .'; }'; }
-			if(!empty($options['colors_footer_top_title'])){ $custom_styles .=' .footer-top h2 { color: '. esc_attr($options['colors_footer_top_title']) .'; }'; }
-			if(!empty($options['colors_footer_top_text'])){ $custom_styles .=' .footer-top p { color: '. esc_attr($options['colors_footer_top_text']) .'; }'; }
-			if(!empty($options['colors_footer_top_link'])){ $custom_styles .=' .footer-nav a, .footer .mail { color: '. esc_attr($options['colors_footer_top_link']) .'; } '; }
-			if(!empty($options['colors_footer_top_link_hover'])){ $custom_styles .=' .footer-top a:hover, .footer .mail:hover { color: '. esc_attr($options['colors_footer_top_link_hover']) .'; } '; }
 		}
 
 		$options_in = get_option("mt_colors_footer_bottom");
@@ -331,25 +293,14 @@ function mellany_css() {
 			if(!empty($options_in['link'])){ if($options_in['link']!='#fffff1'){ $custom_styles .='.footer-bottom a { color:'. esc_attr($options_in['link']) .'!important; }'; } }
 			if(!empty($options_in['hover'])){ if($options_in['hover']!='#fffff1'){ $custom_styles .='.footer-bottom a:hover { color:'. esc_attr($options_in['hover']) .'!important; }'; } }
 			if(!empty($options_in['border'])){ if($options_in['border']!='#fffff1'){ $custom_styles .='.footer-bottom { border-top: 1px solid '. esc_attr($options_in['border']) .'!important; }'; } }
-		} else {
-			if(!empty($options['colors_footer_border'])){ $custom_styles .='.footer-bottom { border-top: 1px solid '. esc_attr($options['colors_footer_border']) .'; }'; }
-			if(!empty($options['colors_footer_bottom_background'])){ $custom_styles .=' .footer-bottom { background: '. esc_attr($options['colors_footer_bottom_background']) .'; } '; }
-			if(!empty($options['colors_footer_bottom_text'])){ $custom_styles .=' .footer-bottom p { color: '. esc_attr($options['colors_footer_bottom_text']) .'; } '; }
-			if(!empty($options['colors_footer_bottom_link'])){ $custom_styles .=' .footer-bottom a { color: '. esc_attr($options['colors_footer_bottom_link']) .'; } '; }
-			if(!empty($options['colors_footer_bottom_link_hover'])){ $custom_styles .=' .footer-bottom a:hover { color: '. esc_attr($options['colors_footer_bottom_link_hover']) .'; } '; }
 		}
 
 		$options_in = get_option("mt_colors_footer_social");
 		if(!empty($options_in)){
 			if(!empty($options_in['icon'])){ if($options_in['icon']!='#fffff1'){ $custom_styles .='.footer .social li a { color:'. esc_attr($options_in['icon']) .'!important; }'; } }
 			if(!empty($options_in['hover'])){ if($options_in['hover']!='#fffff1'){ $custom_styles .='.footer .social li a:hover { color:'. esc_attr($options_in['hover']) .'!important; }'; } }
-			if(!empty($options_in['background'])){ if($options_in['background']!='#fffff1'){ $custom_styles .='.footer .social li a { background:  { color:'. esc_attr($options_in['background']) .'!important; }'; } }
+			if(!empty($options_in['background'])){ if($options_in['background']!='#fffff1'){ $custom_styles .='.footer .social li a { background:'. esc_attr($options_in['background']) .'!important; }'; } }
 			if(!empty($options_in['background_hover'])){ if($options_in['background_hover']!='#fffff1'){ $custom_styles .='.footer .social li a:hover { background:'. esc_attr($options_in['background_hover']) .'!important; }'; } }
-		} else {
-			if(!empty($options['colors_footer_social_icon'])){ $custom_styles .=' .footer .social li a { color: '. esc_attr($options['colors_footer_social_icon']) .'; } '; }
-			if(!empty($options['colors_footer_social_background'])){ $custom_styles .=' .footer .social li a { background: '. esc_attr($options['colors_footer_social_background']) .'; } '; }
-			if(!empty($options['colors_footer_social_icon_hover'])){ $custom_styles .=' .footer .social li a:hover { color: '. esc_attr($options['colors_footer_social_icon_hover']) .'; } '; }
-			if(!empty($options['colors_footer_social_background_hover'])){ $custom_styles .=' .footer .social li a:hover { background: '. esc_attr($options['colors_footer_social_background_hover']) .'; } '; }
 		}
 
 		$options_in = get_option("mt_colors_footer_icons");

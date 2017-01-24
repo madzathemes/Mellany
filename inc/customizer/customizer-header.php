@@ -559,7 +559,7 @@ function mellany_customize_header($wp_customize){
        'settings'    => 'mt_header_time',
        'label'       => esc_attr__( 'Time and Date', 'mellany' ),
        'section'     => 'mellany_header_top',
-       'default'     => 'on',
+       'default'     => 'off',
        'priority'    => 10,
        'choices'     => array(
          'on'  => esc_attr__( 'On', 'mellany' ),

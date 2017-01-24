@@ -130,7 +130,7 @@ function mellany_top_content() { $option = get_option("mellany_theme_options"); 
 			<?php mellany_socials(); ?>
 		</div>
 	<?php } ?>
-	<?php  if ( true == get_theme_mod( 'mt_header_time', true ) ) { ?>
+	<?php  if ( true == get_theme_mod( 'mt_header_time', false ) ) { ?>
 			<div class="head-time">
 				<div id="time-live">00:00<span>:00</span></div>
 				<div class="time-date"><?php echo date( 'd M' ); ?></div>

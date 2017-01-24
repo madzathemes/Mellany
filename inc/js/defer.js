@@ -1,12 +1,3 @@
-var today = new Date();
-var h = today.getHours();
-var today = new Date();
-var m = today.getMinutes();
-var s = today.getSeconds();
-m = checkTime(m);
-s = checkTime(s);
-document.getElementById('time-live').innerHTML =
-h + ":" + m + "<span>:" + s + "</span>";
 function startTime() {
     var today = new Date();
     var m = today.getMinutes();
@@ -16,10 +7,6 @@ function startTime() {
     document.getElementById('time-live').innerHTML =
     h + ":" + m + "<span>:" + s + "</span>";
     var t = setTimeout(function(){requestAnimationFrame(startTime)}, 1000);
-}
-function checkTime(i) {
-    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-    return i;
 }
 
 // Hide Header on on scroll down
