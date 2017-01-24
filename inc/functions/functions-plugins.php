@@ -49,7 +49,7 @@ function mellany_register_required_plugins() {
               'force_activation'		=> false,
         ),
         array(
-            'name'			=> esc_html__( "Magazine Plug","boomnews" ), // The plugin name
+            'name'			=> esc_html__( "Magazine Plug","mellany" ), // The plugin name
             'slug'			=> 'magazine-plug', // The plugin slug (typically the folder name)
             'source'			=> get_template_directory() . '/all_plugins/magazine-plug.zip', // The plugin source
             'required'			=> true, // If false, the plugin is only 'recommended' instead of required

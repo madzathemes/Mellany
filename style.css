@@ -3137,9 +3137,6 @@ blockquote {
     display: none !important;
   }
 
-  .head-weather {
-    text-align: right;
-  }
   .fixed-top-menu ul li  a {
     padding-left: 15px;
     padding-right: 15px;
@@ -3186,8 +3183,7 @@ blockquote {
 }
 
 @media all and (max-width: 991px) {
-
-
+  
   .shadow-wrap .mt-outer-wrap {
     -webkit-box-shadow: 0 0 100px #8c8c8c;
     -moz-box-shadow: 0 0 100px #8c8c8c;
@@ -3246,7 +3242,6 @@ blockquote {
   .fixed-top-menu,
   .nav,
   .head-time,
-  .head-weather,
   .single-top,
   .footer-nav,
   .top-count {

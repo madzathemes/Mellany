@@ -500,19 +500,6 @@ function mellany_customize_header($wp_customize){
       ),
    ));
 
-   Kirki::add_field( 'mellany_theme_options[mobile_header_type]', array(
-    'type'        => 'radio-buttonset',
-    'settings'    => 'mellany_theme_options[mobile_header_type]',
-    'label'       => esc_attr__( 'Mobile Header', 'mellany' ),
-    'section'     => 'mellany_header_top',
-    'default'     => '1',
-    'priority'    => 1,
-    'option_type'           => 'option',
-    'choices'     => array(
-      '1'   => esc_attr__( 'Style 1', 'mellany' ),
-      '2' => esc_attr__( 'Style 2', 'mellany' ),
-    ),
-  ));
 
    Kirki::add_field( 'mellany_theme_options[header_link_blank]', array(
       'type'        => 'switch',
@@ -542,19 +529,6 @@ function mellany_customize_header($wp_customize){
      	),
    ) );
 
-   Kirki::add_field( 'mellany_theme_options[menu_random]', array(
-     	'type'        => 'switch',
-     	'settings'    => 'mellany_theme_options[menu_random]',
-     	'label'       => esc_attr__( 'Random Button', 'mellany' ),
-     	'section'     => 'mellany_header_top',
-     	'default'     => '0',
-       'option_type' => 'option',
-     	'priority'    => 10,
-     	'choices'     => array(
-     		'1'  => esc_attr__( 'Enable', 'mellany' ),
-     		'2' => esc_attr__( 'Disable', 'mellany' ),
-     	),
-   ) );
 
    Kirki::add_field( 'mellany_theme_options[menu_search]', array(
        'type'        => 'switch',
@@ -643,36 +617,6 @@ function mellany_customize_header($wp_customize){
 				),
 		));
 
-		// Weather widget
-		$wp_customize->add_setting('mellany_theme_options[header_weather]', array(
-				'capability'     => 'edit_theme_options',
-				'type'           => 'option',
-				'sanitize_callback' => 'esc_attr',
-			));
-		$wp_customize->add_control( 'mellany_theme_options[header_weather]', array(
-				'settings' => 'mellany_theme_options[header_weather]',
-				'label'    	=> esc_html__('Weather', 'mellany'),
-				'section' => 'mellany_header_top',
-				'type'    => 'select',
-				'choices'    => array(
-					'off' => 'off',
-					'on' => 'on',
-				),
-		));
-
-    Kirki::add_field( 'mellany_theme_options[weather_type]', array(
-      'type'        => 'radio-buttonset',
-      'settings'    => 'mellany_theme_options[weather_type]',
-      'label'       => esc_attr__( 'Weather Type', 'mellany' ),
-      'section'     => 'mellany_header_top',
-      'default'     => 'c',
-      'priority'    => 1,
-      'option_type'           => 'option',
-      'choices'     => array(
-        'f'   => esc_attr__( 'Fahrenheit', 'mellany' ),
-        'c' => esc_attr__( 'Caesium', 'mellany' ),
-      ),
-   ));
 
 		$wp_customize->add_setting('mellany_theme_options[header_link_url]', array(
         'capability'     => 'edit_theme_options',
