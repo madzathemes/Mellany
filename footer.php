@@ -81,7 +81,7 @@
 	<div class="mt-f-data"><div  data-facebook="<?php $data = get_option("facebook_username"); if(!empty($data)) { echo esc_attr($data); } else { echo "empty"; } ?>"
 			data-token="<?php $data = get_option("facebook_token"); if(!empty($data)) { echo esc_attr($data); } else { echo "empty"; } ?>"
 			data-twitter="<?php $data = get_option("twitter_username"); if(!empty($data)) { echo esc_attr($data); } else { echo "empty"; } ?>"
-			data-youtube="<?php  $data = get_option("youtube_username"); if(!empty($data)) { echo esc_attr($data); } else { echo "empty"; } ?>"></div></div>
+			data-youtube="<?php  $data = get_option("youtube_username"); if(!empty($data)) { echo esc_attr($data); } else { echo "empty"; } ?>"></div>
 	</div>
 </div>
 <a href="#" class="footer-scroll-to-top"></a>
