@@ -80,8 +80,8 @@ msgid "<span class=\"meta-nav\">Newer posts  &rarr;</span>"
 msgstr ""
 
 #. Text in function
-#: mellany/inc/customizer/customizer-footer.php:15
 #: mellany/footer.php:47
+#: mellany/inc/customizer/customizer-footer.php:15
 msgid "About Us"
 msgstr ""
 
@@ -208,11 +208,6 @@ msgstr ""
 #. Text in function
 #: mellany/inc/customizer/customizer-header.php:1
 msgid "Button: Trending Posts"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-header.php:1
-msgid "Caesium"
 msgstr ""
 
 #. Text in function
@@ -354,13 +349,8 @@ msgid "Facebook icon link"
 msgstr ""
 
 #. Text in function
-#: mellany/inc/customizer/customizer-header.php:1
-msgid "Fahrenheit"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-footer.php:15
 #: mellany/footer.php:52
+#: mellany/inc/customizer/customizer-footer.php:15
 msgid "Follow Us"
 msgstr ""
 
@@ -636,11 +626,6 @@ msgstr ""
 
 #. Text in function
 #: mellany/inc/customizer/customizer-header.php:1
-msgid "Mobile Header"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-header.php:1
 msgid "Mobile Logo"
 msgstr ""
 
@@ -851,6 +836,11 @@ msgid "Post Carousel"
 msgstr ""
 
 #. Text in function
+#: mellany/inc/customizer/customizer-posts.php:1
+msgid "Post Layouts"
+msgstr ""
+
+#. Text in function
 #: mellany/inc/functions/functions-widget.php:1
 msgid "Post Sidebar"
 msgstr ""
@@ -865,18 +855,12 @@ msgstr ""
 #: mellany/inc/functions/functions-header.php:124
 #: mellany/inc/functions/functions-header.php:125
 #: mellany/inc/functions/functions-header.php:126
-#: mellany/inc/customizer/customizer-posts.php:1
 msgid "Posts"
 msgstr ""
 
 #. Text in function
 #: mellany/inc/single/single-content.php:88
 msgid "Previous article"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-header.php:1
-msgid "Random Button"
 msgstr ""
 
 #. Text in function
@@ -980,8 +964,8 @@ msgid "Share On Twitter"
 msgstr ""
 
 #. Text in function
-#: mellany/inc/single/single-heads.php:71
 #: mellany/inc/single/single-content.php:30
+#: mellany/inc/single/single-heads.php:71
 msgid "Share Post"
 msgstr ""
 
@@ -1104,16 +1088,6 @@ msgstr ""
 #. Text in echo
 #: mellany/search.php:30
 msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-header.php:1
-msgid "Style 1"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-header.php:1
-msgid "Style 2"
 msgstr ""
 
 #. Text in function
@@ -1309,24 +1283,14 @@ msgstr ""
 
 #. Text in function
 #: mellany/inc/functions/functions-general.php:26
-#: mellany/inc/single/single-content.php:73
 #: mellany/inc/functions/functions-comment.php:1
+#: mellany/inc/single/single-content.php:73
 msgid "View all posts by %s"
 msgstr ""
 
 #. Text in function
 #: mellany/inc/customizer/customizer-footer.php:15
 msgid "Vimeo icon link"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-header.php:1
-msgid "Weather"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-header.php:1
-msgid "Weather Type"
 msgstr ""
 
 #. Text in function

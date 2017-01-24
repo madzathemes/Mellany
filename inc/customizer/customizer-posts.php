@@ -4,8 +4,9 @@ function mellany_customize_posts($wp_customize){
 
 
   $wp_customize->add_section('posts_default_settings', array(
-    'title'    	=> esc_html__('Posts', 'mellany'),
+    'title'    	=> esc_html__('Post Layouts', 'mellany'),
     'priority'       => 301,
+    'panel'  => 'magazin_posts'
   ));
 
   Kirki::add_field( 'mellany_theme_options[post_carousel]', array(
