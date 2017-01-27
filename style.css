@@ -319,7 +319,7 @@ input[type="button"] {
   padding: 15px 30px;
   display: inline-block;
   line-height: 1;
-  background: #373e59 !important;
+  background: #19192a !important;
   border: 0px solid silver;
 }
 button:hover,
@@ -2299,12 +2299,12 @@ background-color: rgba(0,0,0,.6);
   padding-right: 5px;
 }
 .single-cat-wrap .post-categories li a{
-  background: #e1e1e1;
-  color: black;
+  background: #4a7aba;
+  color: white;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 12px;
   display: inline-block;
-  padding: 1px 3px;
+  padding: 3px 8px;
 }
 .single-title {
   margin: 0px;
@@ -3621,9 +3621,9 @@ blockquote {
 .letter-wrap {
     margin-bottom: 40px;
     padding: 4px;
-    background-image: repeating-linear-gradient(135deg, #ff6969, #ff6969 10px, #FFF 0px, #FFF 20px, #85adff 0px, #85adff 30px, #FFF 0px, #FFF 40px);
-    background-image: repeating-linear-gradient(135deg, #ff6969, #ff6969 10px, #FFF 0px, #FFF 20px, #85adff 0px, #85adff 30px, #FFF 0px, #FFF 40px);
-    background-image: repeating-linear-gradient(135deg, #ff6969, #ff6969 10px, #FFF 0px, #FFF 20px, #85adff 0px, #85adff 30px, #FFF 0px, #FFF 40px);
+    background-image: repeating-linear-gradient(135deg, #000, #000 10px, #FFF 0px, #FFF 20px, #85adff 0px, #85adff 30px, #FFF 0px, #FFF 40px);
+    background-image: repeating-linear-gradient(135deg, #000, #000 10px, #FFF 0px, #FFF 20px, #85adff 0px, #85adff 30px, #FFF 0px, #FFF 40px);
+    background-image: repeating-linear-gradient(135deg, #000, #000 10px, #FFF 0px, #FFF 20px, #85adff 0px, #85adff 30px, #FFF 0px, #FFF 40px);
 }
 
 /* SO PLUGIN */
