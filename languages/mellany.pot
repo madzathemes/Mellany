@@ -80,8 +80,8 @@ msgid "<span class=\"meta-nav\">Newer posts  &rarr;</span>"
 msgstr ""
 
 #. Text in function
-#: mellany/footer.php:47
 #: mellany/inc/customizer/customizer-footer.php:15
+#: mellany/footer.php:47
 msgid "About Us"
 msgstr ""
 
@@ -136,16 +136,6 @@ msgid "Background Image"
 msgstr ""
 
 #. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Background Left"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Background Right"
-msgstr ""
-
-#. Text in function
 #: mellany/inc/customizer/customizer-header.php:1
 msgid "Background color"
 msgstr ""
@@ -163,31 +153,6 @@ msgstr ""
 #. Text in function
 #: mellany/inc/customizer/customizer-colors.php:1
 msgid "Border"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Bottom Footer Background"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Bottom Footer Link"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Bottom Footer Link Hover"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Bottom Footer Text"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Boxed"
 msgstr ""
 
 #. Text in function
@@ -223,7 +188,7 @@ msgstr ""
 
 #. Text in function
 #: mellany/inc/customizer/customizer-colors.php:1
-msgid "Colors"
+msgid "Clock"
 msgstr ""
 
 #. Text in function
@@ -287,6 +252,11 @@ msgid "Custom ad 9"
 msgstr ""
 
 #. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Date"
+msgstr ""
+
+#. Text in function
 #: mellany/inc/functions/functions-widget.php:1
 msgid "Default Sidebar"
 msgstr ""
@@ -297,7 +267,6 @@ msgid "Default: 40"
 msgstr ""
 
 #. Text in function
-#: mellany/inc/customizer/customizer-header.php:1
 #: mellany/inc/customizer/customizer-posts.php:1
 msgid "Disable"
 msgstr ""
@@ -333,7 +302,6 @@ msgid "Email"
 msgstr ""
 
 #. Text in function
-#: mellany/inc/customizer/customizer-header.php:1
 #: mellany/inc/customizer/customizer-posts.php:1
 msgid "Enable"
 msgstr ""
@@ -349,8 +317,13 @@ msgid "Facebook icon link"
 msgstr ""
 
 #. Text in function
-#: mellany/footer.php:52
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Fixed Header"
+msgstr ""
+
+#. Text in function
 #: mellany/inc/customizer/customizer-footer.php:15
+#: mellany/footer.php:52
 msgid "Follow Us"
 msgstr ""
 
@@ -366,7 +339,7 @@ msgstr ""
 
 #. Text in function
 #: mellany/inc/customizer/customizer-colors.php:1
-msgid "Footer Border"
+msgid "Footer Bottom Colors"
 msgstr ""
 
 #. Text in function
@@ -382,6 +355,16 @@ msgstr ""
 #. Text in function
 #: mellany/inc/customizer/customizer-footer.php:15
 msgid "Footer Settings"
+msgstr ""
+
+#. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Footer Social Icons"
+msgstr ""
+
+#. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Footer Top Colors"
 msgstr ""
 
 #. Text in function
@@ -401,12 +384,7 @@ msgstr ""
 
 #. Text in function
 #: mellany/inc/customizer/customizer-colors.php:1
-msgid "Full Width"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "General Colors"
+msgid "General"
 msgstr ""
 
 #. Text in function
@@ -450,13 +428,24 @@ msgid "HOT"
 msgstr ""
 
 #. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
 #: mellany/inc/customizer/customizer-header.php:1
 msgid "Header"
 msgstr ""
 
 #. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Header & Menu Colors"
+msgstr ""
+
+#. Text in function
 #: mellany/inc/customizer/customizer-ads.php:1
 msgid "Header Ad"
+msgstr ""
+
+#. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Header Button"
 msgstr ""
 
 #. Text in function
@@ -476,7 +465,12 @@ msgstr ""
 
 #. Text in function
 #: mellany/inc/customizer/customizer-colors.php:1
-msgid "Header Objects"
+msgid "Header Icons"
+msgstr ""
+
+#. Text in function
+#: mellany/inc/customizer/customizer-header.php:1
+msgid "Header Social"
 msgstr ""
 
 #. Text in function
@@ -497,6 +491,26 @@ msgstr ""
 #. Text in function
 #: mellany/inc/functions/functions-general.php:94
 msgid "Home"
+msgstr ""
+
+#. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Hot"
+msgstr ""
+
+#. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Hover"
+msgstr ""
+
+#. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Icon"
+msgstr ""
+
+#. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "In"
 msgstr ""
 
 #. Text in function
@@ -525,6 +539,11 @@ msgid "LATEST"
 msgstr ""
 
 #. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Latest"
+msgstr ""
+
+#. Text in function
 #: mellany/inc/customizer/customizer-header.php:1
 msgid "Layouts"
 msgstr ""
@@ -541,17 +560,12 @@ msgstr ""
 
 #. Text in function
 #: mellany/inc/customizer/customizer-colors.php:1
+msgid "Lines"
+msgstr ""
+
+#. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
 msgid "Link"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Link Hover"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Link Hover Background"
 msgstr ""
 
 #. Text in function
@@ -596,7 +610,7 @@ msgstr ""
 
 #. Text in function
 #: mellany/inc/customizer/customizer-colors.php:1
-msgid "Menu Colors"
+msgid "Menu Background"
 msgstr ""
 
 #. Text in function
@@ -621,7 +635,32 @@ msgstr ""
 
 #. Text in function
 #: mellany/inc/customizer/customizer-colors.php:1
-msgid "Menu Style"
+msgid "Menu Links"
+msgstr ""
+
+#. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Menu Search"
+msgstr ""
+
+#. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Menu Smart Button"
+msgstr ""
+
+#. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Menu Social Icons"
+msgstr ""
+
+#. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Menu Sub Links"
+msgstr ""
+
+#. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Mobile Header"
 msgstr ""
 
 #. Text in function
@@ -737,6 +776,16 @@ msgstr ""
 
 #. Text in function
 #: mellany/inc/customizer/customizer-header.php:1
+msgid "Off"
+msgstr ""
+
+#. Text in function
+#: mellany/inc/customizer/customizer-header.php:1
+msgid "On"
+msgstr ""
+
+#. Text in function
+#: mellany/inc/customizer/customizer-header.php:1
 msgid "On/Off"
 msgstr ""
 
@@ -746,13 +795,28 @@ msgid "One Click Demo Import"
 msgstr ""
 
 #. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Only Text"
+msgstr ""
+
+#. Text in function
 #: mellany/inc/customizer/customizer-footer.php:15
 msgid "Open in new page"
 msgstr ""
 
 #. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Other Colors"
+msgstr ""
+
+#. Text in function
 #: mellany/inc/single/single-sidebar.php:18
 msgid "Our Picks"
+msgstr ""
+
+#. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Out"
 msgstr ""
 
 #. Text in echo
@@ -795,6 +859,11 @@ msgstr ""
 msgid "Permalink to %s"
 msgstr ""
 
+#. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Photo bg"
+msgstr ""
+
 #. Text in echo
 #: mellany/inc/functions/functions-comment.php:61
 msgid "Pingback:"
@@ -821,6 +890,11 @@ msgid "Plugin not activated. A higher version of %s is needed for this theme. Pl
 msgstr ""
 
 #. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Popular"
+msgstr ""
+
+#. Text in function
 #: mellany/inc/functions/functions-widget.php:1
 msgid "Post Bottom (After Comments)"
 msgstr ""
@@ -841,6 +915,16 @@ msgid "Post Layouts"
 msgstr ""
 
 #. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Post List Category"
+msgstr ""
+
+#. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Post Share Count"
+msgstr ""
+
+#. Text in function
 #: mellany/inc/functions/functions-widget.php:1
 msgid "Post Sidebar"
 msgstr ""
@@ -848,6 +932,11 @@ msgstr ""
 #. Text in function
 #: mellany/inc/customizer/customizer-posts.php:1
 msgid "Post Style"
+msgstr ""
+
+#. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Post View Count"
 msgstr ""
 
 #. Text in echo
@@ -861,11 +950,6 @@ msgstr ""
 #. Text in function
 #: mellany/inc/single/single-content.php:88
 msgid "Previous article"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Random Button Hover Backgrond"
 msgstr ""
 
 #. Text in function
@@ -929,11 +1013,6 @@ msgid "Sample: 72"
 msgstr ""
 
 #. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Search Backgrond"
-msgstr ""
-
-#. Text in function
 #: mellany/inc/customizer/customizer-header.php:1
 msgid "Search Button"
 msgstr ""
@@ -950,7 +1029,7 @@ msgstr ""
 
 #. Text in function
 #: mellany/inc/customizer/customizer-colors.php:1
-msgid "Search Text"
+msgid "Seconds"
 msgstr ""
 
 #. Text in function
@@ -964,8 +1043,8 @@ msgid "Share On Twitter"
 msgstr ""
 
 #. Text in function
-#: mellany/inc/single/single-content.php:30
 #: mellany/inc/single/single-heads.php:71
+#: mellany/inc/single/single-content.php:30
 msgid "Share Post"
 msgstr ""
 
@@ -1016,68 +1095,18 @@ msgid "Skype icon link"
 msgstr ""
 
 #. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Small Menu Background"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Small Menu Button Hover"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Small Menu Button Hover Background"
-msgstr ""
-
-#. Text in function
 #: mellany/inc/customizer/customizer-header.php:1
 msgid "Small Menu For Desktop"
 msgstr ""
 
 #. Text in function
 #: mellany/inc/customizer/customizer-colors.php:1
-msgid "Small Menu Link"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Small Menu Link Hover"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Small Menu Text"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Social Icon"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Social Icon Background"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Social Icon Hover"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Social Icon Hover Background"
+msgid "Smart Menu"
 msgstr ""
 
 #. Text in function
 #: mellany/inc/customizer/customizer-footer.php:15
 msgid "Social Icons"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Social Widget Hover"
 msgstr ""
 
 #. Text in function
@@ -1092,42 +1121,7 @@ msgstr ""
 
 #. Text in function
 #: mellany/inc/customizer/customizer-colors.php:1
-msgid "Sub Category Link"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Sub Category Link Background"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Sub Category Link Background Hover"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Sub Category Link Hover"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Sub Link"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Sub Link Background"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Sub Link Background Hover"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Sub Link Hover"
+msgid "Style"
 msgstr ""
 
 #. Text in function
@@ -1143,6 +1137,11 @@ msgstr ""
 #. Text in function
 #: mellany/tag.php:16
 msgid "Tag"
+msgstr ""
+
+#. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Text"
 msgstr ""
 
 #. Text in function
@@ -1201,8 +1200,18 @@ msgid "This post is password protected. Enter the password to view and post comm
 msgstr ""
 
 #. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Time"
+msgstr ""
+
+#. Text in function
 #: mellany/inc/customizer/customizer-header.php:1
 msgid "Time and Date"
+msgstr ""
+
+#. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Title"
 msgstr ""
 
 #. Text in echo
@@ -1211,33 +1220,13 @@ msgid "To search type and hit enter"
 msgstr ""
 
 #. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Top Footer Background"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Top Footer Link"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Top Footer Link Hover"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Top Footer Text"
-msgstr ""
-
-#. Text in function
-#: mellany/inc/customizer/customizer-colors.php:1
-msgid "Top Footer Title"
-msgstr ""
-
-#. Text in function
 #: mellany/inc/customizer/customizer-header.php:1
 msgid "Top Space"
+msgstr ""
+
+#. Text in function
+#: mellany/inc/customizer/customizer-colors.php:1
+msgid "Trending"
 msgstr ""
 
 #. Text in function
@@ -1282,9 +1271,9 @@ msgid "Upload Responsive Logo (x2)"
 msgstr ""
 
 #. Text in function
-#: mellany/inc/functions/functions-general.php:26
 #: mellany/inc/functions/functions-comment.php:1
 #: mellany/inc/single/single-content.php:73
+#: mellany/inc/functions/functions-general.php:26
 msgid "View all posts by %s"
 msgstr ""
 
