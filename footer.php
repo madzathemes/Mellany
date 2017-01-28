@@ -46,7 +46,7 @@
 								<div class="col-md-4 footer-about">
 									<h2><?php echo esc_html__('About Us', 'mellany'); ?></h2>
 									<p><?php echo html_entity_decode(get_theme_mod('mellany_footer_about_us', 'Donec eu tellus convallis, vehicula neque sed, mattis elit. Praesent ornare, ligula in efficitur egestas, massa lacus vulputate enim')); ?> </p>
-									<p><?php echo esc_html__('Contact us:', 'mellany'); ?> <a class="mail" href="mailto:<?php echo esc_html(get_theme_mod('mellany_footer_about_us_mail', 'info@mellany.com')); ?>" target="_top"><?php echo esc_html(get_theme_mod('mellany_footer_about_us_mail', 'info@mellany.com')); ?></a></p>
+									<p><?php echo esc_html__('Contact us:', 'mellany'); ?> <a class="mail" href="mailto:<?php echo esc_html(get_theme_mod('mellany_footer_about_us_mail', 'info@example.com')); ?>" target="_top"><?php echo esc_html(get_theme_mod('mellany_footer_about_us_mail', 'info@mellany.com')); ?></a></p>
 								</div>
 								<div class="col-md-5 footer-social">
 									<h2><?php echo esc_html__('Follow Us', 'mellany'); ?></h2>
