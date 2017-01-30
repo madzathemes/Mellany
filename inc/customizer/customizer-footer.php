@@ -153,7 +153,7 @@ function mellany_customize_footer($wp_customize){
 
     //  COPYRIGHT
     $wp_customize->add_setting('mellany_copyright_text', array(
-        'default'    	=> esc_html__('Copyright 2016. Powered by WordPress Theme. By Madars Bitenieks', 'mellany'),
+        'default'    	=> esc_html__('Copyright 2017. Powered by WordPress Theme. By Madars Bitenieks', 'mellany'),
         'capability'     => 'edit_theme_options',
         'type'           => 'theme_mod',
         'sanitize_callback' => 'balanceTags',
