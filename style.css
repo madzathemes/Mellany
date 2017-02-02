@@ -3053,7 +3053,7 @@ blockquote {
     -moz-transform: translate(0,60px); /** Firefox **/
     right: 20px;
     position: fixed;
-    z-index: 9999;
+    z-index: 999;
 }
 .footer-scroll-to-top.active {
   -webkit-backface-visibility: hidden;
