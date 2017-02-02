@@ -2232,6 +2232,9 @@ background-color: rgba(0,0,0,.6);
 .post-style-8 .single-media-top {
   height: 600px;
 }
+.post-style-6 .single-media-top {
+  height: 600px;
+}
 .post-style-7 .single-media {
   height: 700px;
 }
@@ -2242,6 +2245,7 @@ background-color: rgba(0,0,0,.6);
   height: 700px;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
 .single-media-top img {
   width: 100%;

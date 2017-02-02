@@ -117,7 +117,7 @@
     <div class="post-media-wrap">
       <div class="container">
       	<div class="single-media-top single-image-gradient">
-      		<?php echo get_the_post_thumbnail(get_the_ID(),"full"); ?>
+      		<div class="mt-post-image"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>" width="550" height="550" /></div>
       		<div class="single-media-title">
       			<div class="col-md-9">
       				<?php mellany_single_cat(); ?>
@@ -151,8 +151,9 @@
 	<?php  if ( has_post_thumbnail() ) { ?>
     <div class="post-media-wrap">
       <div class="single-media">
-        <div class="single-media-wrap lazyload" data-bg="<?php echo get_the_post_thumbnail_url(get_the_ID(),"full"); ?>">
-      	<div class="single-image-gradient">
+        <div class="single-media-wrap">
+          <div class="mt-post-image"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>" width="550" height="550" /></div>
+        <div class="single-image-gradient">
     			<div class="single-media-title">
             <div class="container">
               <div class="row">

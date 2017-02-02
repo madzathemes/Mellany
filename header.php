@@ -33,11 +33,11 @@ if(!empty($style)){
 }
 ?>
 <?php if(is_single() and $body_class == "8") { ?>
-	<div class="background-image lazyload" data-bg="<?php echo get_the_post_thumbnail_url(get_the_ID(),"full"); ?>"></div>
+	<div class="background-image lazyload" style="background-image:url('<?php echo get_the_post_thumbnail_url(get_the_ID(),"full"); ?>');"></div>
 <?php } else if(!empty($bg_post)) { ?>
-	<div class="background-image lazyload" data-bg="<?php echo esc_url($bg_post); ?>"></div>
+	<div class="background-image lazyload" style="background-image:url('<?php echo esc_url($bg_post); ?>');"></div>
 <?php } else if(!empty($option['background_image'])) { ?>
-	<div class="background-image lazyload" data-bg="<?php echo esc_url($option['background_image']); ?>"></div>
+	<div class="background-image lazyload" style="background-image:url('<?php echo esc_url($option['background_image']); ?>');"></div>
 <?php } ?>
 
 
