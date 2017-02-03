@@ -74,7 +74,8 @@ h2,
 h4,
 .grid-post img, .mt-header-mobile,
 .sf-menu a::before,
-.nav-search-input{
+.nav-search-input,
+.mt-load-more{
   -webkit-transition: all 200ms ease-in-out!important;
   -moz-transition: all 200ms ease-in-out!important;
   -ms-transition: all 200ms ease-in-out!important;
@@ -4372,6 +4373,7 @@ img.mfp-img {
 }
 .mt-load-more:hover {
   color: white;
+  background: #6b8db9;
 }
 .mt-load-more .on {
   position: relative;
