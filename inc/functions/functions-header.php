@@ -82,7 +82,7 @@ if(!empty($option['mobile_header_type'])) {
 				<div class="col-md-12">
 					<div class="top-nav <?php echo esc_attr($menu_boxed); ?> container-fluid">
 
-						<div class="nav-button pointer pull-left <?php if ( false == get_theme_mod( 'mt_menu_small_on', true ) ) { ?>hide-desktop<?php } ?>">
+						<div class="nav-button pointer pull-left <?php if ( false == get_theme_mod( 'mt_menu_small_on', true ) and class_exists('md_walker') ) { ?>hide-desktop<?php } ?>">
 							<div class="mt-m-cool-button">
 								<span class="mt-m-cool-button-line"></span>
 							</div>
@@ -98,7 +98,7 @@ if(!empty($option['mobile_header_type'])) {
 								</div>
 						<?php } ?>
 
-						<?php if ( true == get_theme_mod( 'mt_menu_search', true ) ) { ?>
+						<?php if ( true == get_theme_mod( 'mt_menu_search', true ) and class_exists('md_walker') ) { ?>
 							<div class="search-close"></div>
 							<div class="nav-search-wrap pull-right menu-background-right mt-radius">
 								<div class="nav-search pointer"></div>
@@ -251,7 +251,8 @@ function mellany_header_fixed() {
 
 								<ul class="share">
 									<li class="share-facebook"><a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>" target="_blank"><span><?php echo esc_html__('Share on Facebook', 'mellany'); ?></span></a></li>
-									<li class="share-twitter"><a href="http://twitter.com/home/?status=<?php the_title(); ?>-<?php the_permalink(); ?>" target="_blank"><span><?php echo esc_html__('Share on Twitter', 'mellany'); ?></span></a></li>
+									<?php $input = get_the_title().' '.get_the_permalink(); $title = str_replace( ' ', '+', $input ); ?>
+									<li class="share-twitter"><a href="http://twitter.com/home/?status=<?php echo esc_attr($title); ?>" target="_blank"><span><?php echo esc_html__('Share on Twitter', 'mellany'); ?></span></a></li>
 									<li class="share-more">
 										<div class="share-more-wrap"><div class="share-more-icon">+</div></div>
 										<a href="https://plus.google.com/share?url=<?php the_permalink() ?>" target="_blank"><div class="google"></div></a>

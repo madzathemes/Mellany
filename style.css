@@ -1,6 +1,6 @@
 @charset "utf-8";
 /*-----------------------------------------------------------------------------------
-  	Version: 1.1
+  	Version: 1.2
     Theme Name: Mellany
     Theme URI: mellanynews.magazine-themes.net
     Description: Magazin / Blog
@@ -554,6 +554,11 @@ iframe {
   padding: 0px;
   background: #f5f5f5;
   margin-bottom: 20px;
+}
+.wp-caption.aligncenter,
+.wp-caption.alignleft,
+.wp-caption.alignright {
+  max-width: 100%;
 }
 .alignright {
     float: right;
