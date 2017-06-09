@@ -64,7 +64,7 @@ if(!empty($option['mobile_header_type'])) {
 								<div class="top-ad">
 									<?php if  (!empty($optioz['header_ad_top'])) {  ?>
 								    <div class="text-right">
-								      <?php echo html_entity_decode($optioz['header_ad_top']); ?>
+								      <?php echo do_shortcode(html_entity_decode($optioz['header_ad_top'])); ?>
 								    </div>
 								  <?php } ?>
 								</div>
